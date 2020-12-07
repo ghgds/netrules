@@ -1,0 +1,54 @@
+URL-REGEX,%E5%8F%AE%E5%BD%93 // Added for webpage: https://cn.bing.com/search?q=%E5%8F%AE%E5%BD%93
+# key word regex block list
+URL-REGEX,%E7%AC%AC%E4%BA%94%E4%BA%BA%E6%A0%BC
+URL-REGEX,%E4%BD%A3%E7%A9%BA
+URL-REGEX,%E7%94%9C%E6%96%87
+URL-REGEX,%E6%B1%A1%E6%BC%AB%E7%94%BB
+URL-REGEX,%E6%9D%B0%E7%A9%BA
+# novel block list
+DOMAIN-SUFFIX,ihuaben.com
+DOMAIN-SUFFIX,itangyuan.com
+DOMAIN-SUFFIX,bjcan.com
+DOMAIN-SUFFIX,chalijiushi.cn
+# wechat block list
+# DOMAIN-SUFFIX,szextshort.weixin.qq.com
+# video block list
+DOMAIN-SUFFIX,iqiyi.com
+DOMAIN-SUFFIX,video.qq.com
+DOMAIN-SUFFIX,v.qq.com
+DOMAIN-SUFFIX,bilibili.com
+# picture block list
+# sogoucdn : wechat search pics
+DOMAIN-SUFFIX,sogoucdn.com
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,qlogo.cn
+DOMAIN-SUFFIX,www.yeitu.com
+# SNS block list
+DOMAIN-SUFFIX,weibo.cn
+# AD block list
+DOMAIN-SUFFIX,stats.chinaz.com
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,zhihu-analytics.zhihu.com
+DOMAIN-SUFFIX,ad.12306.cn
+DOMAIN-SUFFIX,eclick.baidu.com
+DOMAIN-KEYWORD,adservice
+# >> Tencent
+DOMAIN-SUFFIX,bugly.qq.com
+DOMAIN-SUFFIX,e.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,l.qq.com
+DOMAIN-SUFFIX,rqd.qq.com
+DOMAIN,mi.gdt.qq.com
+DOMAIN,btrace.qq.com
+DOMAIN,mtrace.qq.com
+DOMAIN,oth.eve.mdt.qq.com
+DOMAIN,pgdt.gtimg.cn
+DOMAIN,pingma.qq.com
+DOMAIN,pingtcss.qq.com
+DOMAIN,splashqqlive.gtimg.com
+DOMAIN,tajs.qq.com
+# >> Youku
+DOMAIN-SUFFIX,atm.youku.com
+DOMAIN,ad.mobile.youku.com
+DOMAIN,iyes.youku.com
