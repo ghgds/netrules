@@ -1,3 +1,17 @@
+DOMAIN-SUFFIX,seofen.com
+DOMAIN-SUFFIX,lcread.com
+DOMAIN-SUFFIX,jjwxc.net
+DOMAIN-SUFFIX,mkzhan.com
+DOMAIN-SUFFIX,tieba.baidu.com
+DOMAIN-SUFFIX,100bt.com
+URL-REGEX,%E6%9F%AF%E5%93%80
+URL-REGEX,%E6%96%B0%E5%BF%97
+URL-REGEX,%E9%B8%A3%E9%9B%8F
+DOMAIN-SUFFIX,guidada.com // Added for webpage: http://www.guidada.com/duanpian/19826.html
+DOMAIN-SUFFIX,bcy.net // Added for webpage: https://bcy.net/item/detail/6780318511479659528?_source_page=detail
+DOMAIN-SUFFIX,jokeji.cn // Added for webpage: http://www.jokeji.cn/
+DOMAIN,mesu.apple.com // Added for webpage: mesu.apple.com:443
+DOMAIN,gdmf.apple.com // Added for webpage: gdmf.apple.com:443
 URL-REGEX,%E5%8F%AE%E5%BD%93 // Added for webpage: https://cn.bing.com/search?q=%E5%8F%AE%E5%BD%93
 # key word regex block list
 URL-REGEX,%E7%AC%AC%E4%BA%94%E4%BA%BA%E6%A0%BC
@@ -25,30 +39,3 @@ DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,www.yeitu.com
 # SNS block list
 DOMAIN-SUFFIX,weibo.cn
-# AD block list
-DOMAIN-SUFFIX,stats.chinaz.com
-DOMAIN-SUFFIX,google-analytics.com
-DOMAIN-SUFFIX,doubleclick.net
-DOMAIN-SUFFIX,zhihu-analytics.zhihu.com
-DOMAIN-SUFFIX,ad.12306.cn
-DOMAIN-SUFFIX,eclick.baidu.com
-DOMAIN-KEYWORD,adservice
-# >> Tencent
-DOMAIN-SUFFIX,bugly.qq.com
-DOMAIN-SUFFIX,e.qq.com
-DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN-SUFFIX,l.qq.com
-DOMAIN-SUFFIX,rqd.qq.com
-DOMAIN,mi.gdt.qq.com
-DOMAIN,btrace.qq.com
-DOMAIN,mtrace.qq.com
-DOMAIN,oth.eve.mdt.qq.com
-DOMAIN,pgdt.gtimg.cn
-DOMAIN,pingma.qq.com
-DOMAIN,pingtcss.qq.com
-DOMAIN,splashqqlive.gtimg.com
-DOMAIN,tajs.qq.com
-# >> Youku
-DOMAIN-SUFFIX,atm.youku.com
-DOMAIN,ad.mobile.youku.com
-DOMAIN,iyes.youku.com
