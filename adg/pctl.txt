@@ -1,0 +1,1 @@
+! Parent Control list for adguard, key word same as sg/pcrules.
