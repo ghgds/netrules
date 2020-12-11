@@ -1,1 +1,43 @@
 ! Parent Control list for adguard, key word same as sg/pcrules.
+! sg rule -> adguard rule 
+! DOMAIN-SUFFIX,   ->   || ; add ^$empty,important
+! URL-REGEX,  -> '';   add $empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+||seofen.com^$empty,important
+||lcread.com^$empty,important
+||jjwxc.net^$empty,important
+||mkzhan.com^$empty,important
+||tieba.baidu.com^$empty,important
+||100bt.com^$empty,important
+%E6%9F%AF%E5%93%80$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+%E6%96%B0%E5%BF%97$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+%E9%B8%A3%E9%9B%8F$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+||guidada.com^$empty,important
+||bcy.net^$empty,important
+||jokeji.cn^$empty,important
+%E5%8F%AE%E5%BD%93$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+! key word regex block list
+%E7%AC%AC%E4%BA%94%E4%BA%BA%E6%A0%BC$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+%E4%BD%A3%E7%A9%BA$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+%E7%94%9C%E6%96%87$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+%E6%B1%A1%E6%BC%AB%E7%94%BB$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+%E6%9D%B0%E7%A9%BA$empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
+! novel block list
+||ihuaben.com^$empty,important
+||itangyuan.com^$empty,important
+||bjcan.com^$empty,important
+||chalijiushi.cn^$empty,important
+! wechat block list
+! ||szextshort.weixin.qq.com
+! video block list
+||iqiyi.com^$empty,important
+||video.qq.com^$empty,important
+||v.qq.com^$empty,important
+||bilibili.com^$empty,important
+! picture block list
+! sogoucdn : wechat search pics
+||sogoucdn.com^$empty,important
+||qpic.cn^$empty,important
+||qlogo.cn^$empty,important
+||www.yeitu.com^$empty,important
+! SNS block list
+||weibo.cn^$empty,important
