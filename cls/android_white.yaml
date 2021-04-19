@@ -7,5 +7,3 @@ payload:
   - DOMAIN-SUFFIX,360buyimg.com
 # web steaming
   - DOMAIN-SUFFIX,115.com
-# web site
-  - DOMAIN-SUFFIX,lvv2.com
