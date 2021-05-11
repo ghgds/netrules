@@ -8,6 +8,7 @@ payload:
   - DOMAIN-SUFFIX,mxc.com
 # Emby 终点站 AGA 线路
   - DOMAIN,pub1.emby.wtf
+  - DOMAIN,pub1.emby.wtf
   - DOMAIN,pub1alt.emby.wtf
   - DOMAIN,pub1sg.emby.wtf
   - DOMAIN,pub1sgalt.emby.wtf
