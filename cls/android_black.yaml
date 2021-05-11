@@ -6,7 +6,7 @@ payload:
   - DOMAIN-SUFFIX,lvv2.com
 # finance
   - DOMAIN-SUFFIX,mxc.com
-# Emby 终点站 aga 线路
+# Emby 终点站 AGA 线路
   - DOMAIN,pub1.emby.wtf
   - DOMAIN,pub1alt.emby.wtf
   - DOMAIN,pub1sg.emby.wtf
