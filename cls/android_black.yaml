@@ -7,8 +7,6 @@ payload:
 # finance
   - DOMAIN-SUFFIX,mxc.com
 # Emby 终点站 AGA 线路
-# finance
-  - DOMAIN-SUFFIX,mxc.com
   - DOMAIN,pub1.emby.wtf
   - DOMAIN,pub1.emby.wtf
   - DOMAIN,pub1alt.emby.wtf
