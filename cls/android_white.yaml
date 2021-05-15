@@ -8,3 +8,5 @@ payload:
 # web steaming
   - DOMAIN-SUFFIX,115.com
   - DOMAIN-SUFFIX,bing.com
+# PS download
+  - DOMAIN-SUFFIX,dl.playstation.net
