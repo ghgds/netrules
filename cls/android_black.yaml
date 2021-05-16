@@ -21,8 +21,8 @@ payload:
   - DOMAIN,pub3sg.emby.wtf
   - DOMAIN,pub3sgalt.emby.wtf
 # PS non-download domains
-  - DOMAIN,km.playstation.net
-  - DOMAIN,np.playstation.net
-  - DOMAIN,aem.playstation.com
-  - DOMAIN,api.playstation.com
-  - DOMAIN,communication.playstation.net
+  - DOMAIN-SUFFIX,km.playstation.net
+  - DOMAIN-SUFFIX,np.playstation.net
+  - DOMAIN-SUFFIX,aem.playstation.com
+  - DOMAIN-SUFFIX,api.playstation.com
+  - DOMAIN-SUFFIX,communication.playstation.net
