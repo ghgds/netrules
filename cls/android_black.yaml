@@ -8,7 +8,6 @@ payload:
   - DOMAIN-SUFFIX,mxc.com
 # Emby 终点站 AGA 线路
   - DOMAIN,pub1.emby.wtf
-  - DOMAIN,pub1.emby.wtf
   - DOMAIN,pub1alt.emby.wtf
   - DOMAIN,pub1sg.emby.wtf
   - DOMAIN,pub1sgalt.emby.wtf
@@ -26,3 +25,6 @@ payload:
   - DOMAIN-SUFFIX,aem.playstation.com
   - DOMAIN-SUFFIX,api.playstation.com
   - DOMAIN-SUFFIX,communication.playstation.net
+# TV and Movie medadata scratch
+  - DOMAIN,api.thetvdb.com
+  - DOMAIN,api.themoviedb.org
