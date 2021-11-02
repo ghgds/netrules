@@ -1,1 +1,4 @@
-#去广告设置
+payload:
+  - DOMAIN,adeventtracker.spotify.com
+  - DOMAIN,pixel.spotify.com
+  - DOMAIN,pixel-static.spotify.com
