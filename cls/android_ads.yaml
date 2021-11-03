@@ -38,7 +38,6 @@ payload:
   - DOMAIN, video-fa.scdn.co
   - DOMAIN, video-fa.cdn.spotify.com
   - DOMAIN, video-fa-b.cdn.spotify.com
-
 ######################################
 # BLOCK THE FOLLOWING AKAMAI SERVERS #
 ######################################
@@ -289,7 +288,6 @@ payload:
   - DOMAIN, fd.video-ak.cdn.spotify.com
   - DOMAIN, fe.video-ak.cdn.spotify.com
   - DOMAIN, ff.video-ak.cdn.spotify.com
-
 ######################################
 # BLOCK THE FOLLOWING FASTLY SERVERS #
 ######################################
@@ -298,14 +296,12 @@ payload:
   - DOMAIN, prod.spotify-heads.map.fastlylb.net
   - DOMAIN, prod.spotify.map.fastly.net
   - DOMAIN, prod.spotify.map.fastlylb.net
-
 #######################################
 # BLOCK THE FOLLOWING (DEBUGGING ETC) #
 #######################################
   - DOMAIN, ipinfo.io
   - DOMAIN, cdn.ravenjs.com
   - DOMAIN, links.iterable.com
-
 ########################################
 # BELOW ARE EXTERNAL ADS AND ANALYTICS #
 ########################################
@@ -316,7 +312,6 @@ payload:
   - DOMAIN, events.adjust.com
   - DOMAIN, ulink.adjust.com
   - DOMAIN, view.adjust.com
-
 # block admob ads
   - DOMAIN, a.admob.com
   - DOMAIN, ac1.vip.sc9.admob.com
@@ -423,7 +418,6 @@ payload:
   - DOMAIN, y.admob.com
   - DOMAIN, z.admob.com
   - DOMAIN, zhcn.admob.com
-
 # block akamai technologies (i doubt it will be used directly)
   - DOMAIN, a1294.w20.akamai.net
   - DOMAIN, a1843.g.akamai.net
@@ -431,30 +425,24 @@ payload:
   - DOMAIN, bsams.eyeblaster.akadns.net
   - DOMAIN, e7876.dscg.akamaiedge.net
   - DOMAIN, e8218.dscb1.akamaiedge.net
-
 # block amazon (i doubt it will be used directly)
   - DOMAIN, na.gmtdmp.com
   - DOMAIN, d2gi7ultltnc2u.cloudfront.net
   - DOMAIN, lb1-217593028.us-east-1.elb.amazonaws.com
   - DOMAIN, rp-lb-766892831.us-east-1.elb.amazonaws.com
   - DOMAIN, server-54-230-216-203.mrs50.r.cloudfront.net
-
 # block aol
   - DOMAIN, adserver.adtechus.com
-
 # appnexus
   - DOMAIN, a.adk2x.com
   - DOMAIN, adnxs.com
   - DOMAIN, adnxs.comadplexmedia.adk2x.com
   - DOMAIN, ams1-ib.adnxs.com
   - DOMAIN, ib.adnxs.com
-
 # block ayden payments
   - DOMAIN, live.adyen.com
-
 # block bounce exchange (anonymous)
   - DOMAIN, bounceexchange.com
-
 # block comscore analytics
   - DOMAIN, admetrix.comscore.com
   - DOMAIN, api.comscore.com
@@ -490,7 +478,6 @@ payload:
   - DOMAIN, svn.comscore.com
   - DOMAIN, www.comscore.com
   - DOMAIN, www.mycomscore.net
-
 # block crashlytics
   - DOMAIN, crashlytics.163.com
   - DOMAIN, crashlytics.com
@@ -500,16 +487,12 @@ payload:
   - DOMAIN, settings-crashlytics-1410998606.us-east-1.elb.amazonaws.com
   - DOMAIN, settings-crashlytics-b-103974621.us-east-1.elb.amazonaws.com
   - DOMAIN, settings.crashlytics.com
-
 # block data protected
   - DOMAIN, combine.urbanairship.com
-
 # block drawbridge
   - DOMAIN, ads-west-colo.adsymptotic.com
-
 # block geotrust
   - DOMAIN, gtssl2-ocsp.geotrust.com
-
 # block google ads / analytics
   - DOMAIN, ad.doubleclick.net
   - DOMAIN, adclick.g.doublecklick.net
@@ -537,10 +520,8 @@ payload:
   - DOMAIN, video-ad-stats.googlesyndication.com
   - DOMAIN, www.googleadservices.com
   - DOMAIN, www.googletagservices.com
-
 # block integral ad science
   - DOMAIN, anycast.pixel.adsafeprotected.com
-
 # block intercom ads
   - DOMAIN, api-iam.intercom.io
   - DOMAIN, api-ping.intercom.io
@@ -565,23 +546,17 @@ payload:
   - DOMAIN, widget.intercom.io
   - DOMAIN, woody.intercom.io
   - DOMAIN, www.intercom.io
-
 # block kantar operations
   - DOMAIN, core.insightexpressai.com
-
 # block leanlab
   - DOMAIN, track.leanlab.co
-
 # block longtail ad solutions (jwplayer also used for ads)
   - DOMAIN, content.bitsontherun.com
   - DOMAIN, v.jwpcdn.com
-
 # block media innovation group
   - DOMAIN, eu-gmtdmp.gd1.mookie1.com
-
 block # media match
   - DOMAIN, media-match.com
-
 # block mobileapptracking ads (now tune)
   - DOMAIN, ab.tune.com
   - DOMAIN, academy.tune.com
@@ -607,14 +582,12 @@ block # media match
   - DOMAIN, updates.tune.com
   - DOMAIN, www.cp.tune.com
   - DOMAIN, www.ui.cp.tune.com
-
 # block mixpanel analytics
   - DOMAIN, api.mixpanel.com
   - DOMAIN, decide.mixpanel.com
   - DOMAIN, mixpanel.com
   - DOMAIN, switchboard.mixpanel.com
   - DOMAIN, www.mixpanel.com
-
 # block moatads / moatanalytics
   - DOMAIN, adgrx.moatads.com
   - DOMAIN, afs.moatads.com
@@ -666,48 +639,37 @@ block # media match
   - DOMAIN, yt.moatads.com
   - DOMAIN, yts.moatads.com
   - DOMAIN, z.moatads.com
-
 # block myvisualiq
   - DOMAIN, t.myvisualiq.net
   - DOMAIN, vt.myvisualiq.net
-
 # block omaze
   - DOMAIN, omaze.com
   - DOMAIN, www.omaze.com
-
 # block pubmatic
   - DOMAIN, ads.pubmatic.com
   - DOMAIN, gads.pubmatic.com
   - DOMAIN, gads22000.pubmatic.com
   - DOMAIN, showads33000.pubmatic.com
-
 # block scorecardresearch
   - DOMAIN, b.scorecardresearch.com
   - DOMAIN, sb.scorecardresearch.com
   - DOMAIN, udm.scorecardresearch.com
-
 # block sizmek technologies
   - DOMAIN, bs.serving-sys.com
   - DOMAIN, ds.serving-sys.com
-
 # block telia (i doubt it will be used directly)
   - DOMAIN, cs126.wpc.teliasoneracdn.net
   - DOMAIN, cs283.wpc.teliasoneracdn.net
-
 # block the whiz marketing
   - DOMAIN, seen-on-screen.thewhizmarketing.com
-
 # block verizon (i doubt it will be used directly)
   - DOMAIN, cs126.wpc.edgecastcdn.net
   - DOMAIN, cs934.wac.thetacdn.net
-
 # block voicefive
   - DOMAIN, ar.voicefive.com
   - DOMAIN, sb.voicefive.com
-
 # block yahoo adflurry
   - DOMAIN, ads.flurry.com
   - DOMAIN, media-router-flurry7.prod.media.wg1.b.yahoo.com
-
 # block zwizz army knife (anonymous)
   - DOMAIN, api.zwizzarmyknife.com
