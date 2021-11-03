@@ -555,7 +555,7 @@ payload:
   - DOMAIN, v.jwpcdn.com
 # block media innovation group
   - DOMAIN, eu-gmtdmp.gd1.mookie1.com
-block # media match
+# block media match
   - DOMAIN, media-match.com
 # block mobileapptracking ads (now tune)
   - DOMAIN, ab.tune.com
