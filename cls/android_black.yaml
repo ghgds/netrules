@@ -6,10 +6,12 @@ payload:
   - DOMAIN-SUFFIX,lvv2.com
 # finance
   - DOMAIN-SUFFIX,mxc.com
-# Emby 终点站 AGA 线路
+# Emby 终点站高可用全球入口
   - DOMAIN,pub2back.emby.wtf
-# Emby Otakudrive
+  - DOMAIN,pub3back.emby.wtf
+# Emby Otakudrive、pornemby
   - DOMAIN-SUFFIX,otakudrive.life
+  - DOMAIN-SUFFIX,pornemby.club
 # PS non-download domains
   - DOMAIN-SUFFIX,km.playstation.net
   - DOMAIN-SUFFIX,np.playstation.net
