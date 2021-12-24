@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,lvv2.com
 #finance
 DOMAIN-SUFFIX,mxc.com
 DOMAIN-SUFFIX,binance.me
+DOMAIN-SUFFIX,binance.com
 # Emby 终点站高可用入口2
 DOMAIN,pub2ha2.emby.wtf
 DOMAIN,pub3ha2.emby.wtf
