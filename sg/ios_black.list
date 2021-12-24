@@ -5,9 +5,10 @@ DOMAIN-SUFFIX,tedcdn.com
 DOMAIN-SUFFIX,lvv2.com
 #finance
 DOMAIN-SUFFIX,mxc.com
-# Emby 终点站高可用全球入口
-DOMAIN,pub2back.emby.wtf
-DOMAIN,pub3back.emby.wtf
+DOMAIN-SUFFIX,binance.me
+# Emby 终点站高可用入口2
+DOMAIN,pub2ha2.emby.wtf
+DOMAIN,pub3ha2.emby.wtf
 # Emby Otakudrive、pornemby
 DOMAIN-SUFFIX,otakudrive.life
 DOMAIN-SUFFIX,pornemby.club
