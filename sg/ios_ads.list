@@ -5,3 +5,18 @@ DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,applvn.com
 DOMAIN-SUFFIX,unityads.unity.cn
 DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,doubleclick.net
+#Mi watch ads
+DOMAIN,ad.xunkids.com
+#spotify ads
+DOMAIN,ads-akp.spotify.com
+DOMAIN,audio-ak.spotify.com
+DOMAIN,analytics.spotify.com
+DOMAIN,log.spotify.com
+DOMAIN,log2.spotify.com
+DOMAIN,mp3ad.scdn.co
+DOMAIN,partner-service.spotify.com
+DOMAIN,video-fa.scdn.co
+DOMAIN,audio-fa.scdn.co
+DOMAIN,adeventtracker.spotify.com
+DOMAIN,audio-ak-spotify-com.akamaized.net
