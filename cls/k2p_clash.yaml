@@ -1,0 +1,280 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: Rule
+log-level: info
+external-controller: '0.0.0.0:9090'
+secret: ''
+cfw-latency-url: 'http://cp.cloudflare.com/generate_204'
+
+
+proxies:
+
+
+proxy-groups:
+- name: "PROXY"
+  type: select
+  proxies:
+      - "URLTest 自动选择"
+      - "Fallback 故障转移"
+      - 🇭🇰 Hong Kong 09
+
+
+# 白名单模式 PROXY，黑名单模式 DIRECT
+- name: "Final"
+  type: select
+  proxies: DIRECT
+
+
+# Apple 服务代理
+- name: "Apple"
+  type: select
+  proxies:
+      - "DIRECT"
+      - "PROXY"
+
+- name: "GlobalMedia"
+  type: select
+  proxies:
+      - "PROXY"
+      - "DIRECT"
+      - 🇭🇰 Hong Kong 09
+
+
+- name: "Ads"
+  type: select
+  proxies:
+      - "REJECT"
+      - "DIRECT"
+
+
+rules:
+# Unbreak
+# > Google
+- DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
+- DOMAIN,dl.google.com,DIRECT
+- DOMAIN,mtalk.google.com,DIRECT
+
+# Internet Service Provider Ads 运营商劫持
+- DOMAIN-SUFFIX,17gouwuba.com,Ads
+- DOMAIN-SUFFIX,186078.com,Ads
+- DOMAIN-SUFFIX,189zj.cn,Ads
+- DOMAIN-SUFFIX,285680.com,Ads
+- DOMAIN-SUFFIX,3721zh.com,Ads
+- DOMAIN-SUFFIX,4336wang.cn,Ads
+- DOMAIN-SUFFIX,51chumoping.com,Ads
+- DOMAIN-SUFFIX,51mld.cn,Ads
+- DOMAIN-SUFFIX,51mypc.cn,Ads
+- DOMAIN-SUFFIX,58mingri.cn,Ads
+- DOMAIN-SUFFIX,58mingtian.cn,Ads
+- DOMAIN-SUFFIX,5vl58stm.com,Ads
+- DOMAIN-SUFFIX,6d63d3.com,Ads
+- DOMAIN-SUFFIX,7gg.cc,Ads
+- DOMAIN-SUFFIX,91veg.com,Ads
+- DOMAIN-SUFFIX,9s6q.cn,Ads
+- DOMAIN-SUFFIX,adsame.com,Ads
+- DOMAIN-SUFFIX,aiclk.com,Ads
+- DOMAIN-SUFFIX,akuai.top,Ads
+- DOMAIN-SUFFIX,atplay.cn,Ads
+- DOMAIN-SUFFIX,baiwanchuangyi.com,Ads
+- DOMAIN-SUFFIX,beerto.cn,Ads
+- DOMAIN-SUFFIX,beilamusi.com,Ads
+- DOMAIN-SUFFIX,benshiw.net,Ads
+- DOMAIN-SUFFIX,bianxianmao.com,Ads
+- DOMAIN-SUFFIX,bryonypie.com,Ads
+- DOMAIN-SUFFIX,cishantao.com,Ads
+- DOMAIN-SUFFIX,cszlks.com,Ads
+- DOMAIN-SUFFIX,cudaojia.com,Ads
+- DOMAIN-SUFFIX,dafapromo.com,Ads
+- DOMAIN-SUFFIX,daitdai.com,Ads
+- DOMAIN-SUFFIX,dsaeerf.com,Ads
+- DOMAIN-SUFFIX,dugesheying.com,Ads
+- DOMAIN-SUFFIX,dv8c1t.cn,Ads
+- DOMAIN-SUFFIX,echatu.com,Ads
+- DOMAIN-SUFFIX,erdoscs.com,Ads
+- DOMAIN-SUFFIX,fan-yong.com,Ads
+- DOMAIN-SUFFIX,feih.com.cn,Ads
+- DOMAIN-SUFFIX,fjlqqc.com,Ads
+- DOMAIN-SUFFIX,fkku194.com,Ads
+- DOMAIN-SUFFIX,freedrive.cn,Ads
+- DOMAIN-SUFFIX,gclick.cn,Ads
+- DOMAIN-SUFFIX,goufanli100.com,Ads
+- DOMAIN-SUFFIX,goupaoerdai.com,Ads
+- DOMAIN-SUFFIX,gouwubang.com,Ads
+- DOMAIN-SUFFIX,gzxnlk.com,Ads
+- DOMAIN-SUFFIX,haoshengtoys.com,Ads
+- DOMAIN-SUFFIX,hyunke.com,Ads
+- DOMAIN-SUFFIX,ichaosheng.com,Ads
+- DOMAIN-SUFFIX,ishop789.com,Ads
+- DOMAIN-SUFFIX,jdkic.com,Ads
+- DOMAIN-SUFFIX,jiubuhua.com,Ads
+- DOMAIN-SUFFIX,jwg365.cn,Ads
+- DOMAIN-SUFFIX,kawo77.com,Ads
+- DOMAIN-SUFFIX,kualianyingxiao.cn,Ads
+- DOMAIN-SUFFIX,kumihua.com,Ads
+- DOMAIN-SUFFIX,ltheanine.cn,Ads
+- DOMAIN-SUFFIX,maipinshangmao.com,Ads
+- DOMAIN-SUFFIX,minisplat.cn,Ads
+- DOMAIN-SUFFIX,mkitgfs.com,Ads
+- DOMAIN-SUFFIX,mlnbike.com,Ads
+- DOMAIN-SUFFIX,mobjump.com,Ads
+- DOMAIN-SUFFIX,nbkbgd.cn,Ads
+- DOMAIN-SUFFIX,newapi.com,Ads
+- DOMAIN-SUFFIX,pinzhitmall.com,Ads
+- DOMAIN-SUFFIX,poppyta.com,Ads
+- DOMAIN-SUFFIX,qianchuanghr.com,Ads
+- DOMAIN-SUFFIX,qichexin.com,Ads
+- DOMAIN-SUFFIX,qinchugudao.com,Ads
+- DOMAIN-SUFFIX,quanliyouxi.cn,Ads
+- DOMAIN-SUFFIX,qutaobi.com,Ads
+- DOMAIN-SUFFIX,ry51w.cn,Ads
+- DOMAIN-SUFFIX,sg536.cn,Ads
+- DOMAIN-SUFFIX,sifubo.cn,Ads
+- DOMAIN-SUFFIX,sifuce.cn,Ads
+- DOMAIN-SUFFIX,sifuda.cn,Ads
+- DOMAIN-SUFFIX,sifufu.cn,Ads
+- DOMAIN-SUFFIX,sifuge.cn,Ads
+- DOMAIN-SUFFIX,sifugu.cn,Ads
+- DOMAIN-SUFFIX,sifuhe.cn,Ads
+- DOMAIN-SUFFIX,sifuhu.cn,Ads
+- DOMAIN-SUFFIX,sifuji.cn,Ads
+- DOMAIN-SUFFIX,sifuka.cn,Ads
+- DOMAIN-SUFFIX,smgru.net,Ads
+- DOMAIN-SUFFIX,taoggou.com,Ads
+- DOMAIN-SUFFIX,tcxshop.com,Ads
+- DOMAIN-SUFFIX,tjqonline.cn,Ads
+- DOMAIN-SUFFIX,topitme.com,Ads
+- DOMAIN-SUFFIX,tt3sm4.cn,Ads
+- DOMAIN-SUFFIX,tuia.cn,Ads
+- DOMAIN-SUFFIX,tuipenguin.com,Ads
+- DOMAIN-SUFFIX,tuitiger.com,Ads
+- DOMAIN-SUFFIX,websd8.com,Ads
+- DOMAIN-SUFFIX,wx16999.com,Ads
+- DOMAIN-SUFFIX,xiaohuau.xyz,Ads
+- DOMAIN-SUFFIX,yinmong.com,Ads
+- DOMAIN-SUFFIX,yiqifa.com,Ads
+- DOMAIN-SUFFIX,yitaopt.com,Ads
+- DOMAIN-SUFFIX,yjqiqi.com,Ads
+- DOMAIN-SUFFIX,yukhj.com,Ads
+- DOMAIN-SUFFIX,zhaozecheng.cn,Ads
+- DOMAIN-SUFFIX,zhenxinet.com,Ads
+- DOMAIN-SUFFIX,zlne800.com,Ads
+- DOMAIN-SUFFIX,zunmi.cn,Ads
+- DOMAIN-SUFFIX,zzd6.com,Ads
+
+    # Infamous 声名狼藉
+- DOMAIN-SUFFIX,kuaizip.com,Ads
+- DOMAIN-SUFFIX,mackeeper.com,Ads
+
+
+    # Global Area Network
+    # (GlobalMedia)
+    # (Music)
+    # > Deezer
+    # USER-AGENT,Deezer*,GlobalMedia
+- DOMAIN-SUFFIX,deezer.com,GlobalMedia
+- DOMAIN-SUFFIX,dzcdn.net,GlobalMedia
+    # > Spotify
+    # USER-AGENT,Spotify*,GlobalMedia
+- DOMAIN-SUFFIX,pscdn.co,GlobalMedia
+- DOMAIN-SUFFIX,scdn.co,GlobalMedia
+- DOMAIN-SUFFIX,spotify.com,GlobalMedia
+- DOMAIN-SUFFIX,spoti.fi,GlobalMedia
+    # > Youtube
+    # USER-AGENT,com.google.ios.youtube*,GlobalMedia
+    # USER-AGENT,YouTube*,GlobalMedia
+- DOMAIN-SUFFIX,googlevideo.com,GlobalMedia
+- DOMAIN-SUFFIX,youtube.com,GlobalMedia
+- DOMAIN,youtubei.googleapis.com,GlobalMedia
+
+
+    # (DNS Cache Pollution Protection)
+    # > Google
+- DOMAIN-SUFFIX,appspot.com,PROXY
+- DOMAIN-SUFFIX,blogger.com,PROXY
+- DOMAIN-SUFFIX,getoutline.org,PROXY
+- DOMAIN-SUFFIX,gvt0.com,PROXY
+- DOMAIN-SUFFIX,gvt1.com,PROXY
+- DOMAIN-SUFFIX,gvt3.com,PROXY
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PROXY
+- DOMAIN-KEYWORD,google,PROXY
+- DOMAIN-KEYWORD,blogspot,PROXY
+
+
+    # (The Most Popular Sites)
+    # > Google
+- DOMAIN-SUFFIX,abc.xyz,PROXY
+- DOMAIN-SUFFIX,android.com,PROXY
+- DOMAIN-SUFFIX,androidify.com,PROXY
+- DOMAIN-SUFFIX,dialogflow.com,PROXY
+- DOMAIN-SUFFIX,autodraw.com,PROXY
+- DOMAIN-SUFFIX,capitalg.com,PROXY
+- DOMAIN-SUFFIX,certificate-transparency.org,PROXY
+- DOMAIN-SUFFIX,chrome.com,PROXY
+- DOMAIN-SUFFIX,chromeexperiments.com,PROXY
+- DOMAIN-SUFFIX,chromestatus.com,PROXY
+- DOMAIN-SUFFIX,chromium.org,PROXY
+- DOMAIN-SUFFIX,creativelab5.com,PROXY
+- DOMAIN-SUFFIX,debug.com,PROXY
+- DOMAIN-SUFFIX,deepmind.com,PROXY
+- DOMAIN-SUFFIX,firebaseio.com,PROXY
+- DOMAIN-SUFFIX,getmdl.io,PROXY
+- DOMAIN-SUFFIX,ggpht.com,PROXY
+- DOMAIN-SUFFIX,gmail.com,PROXY
+- DOMAIN-SUFFIX,gmodules.com,PROXY
+- DOMAIN-SUFFIX,godoc.org,PROXY
+- DOMAIN-SUFFIX,golang.org,PROXY
+- DOMAIN-SUFFIX,gstatic.com,PROXY
+- DOMAIN-SUFFIX,gv.com,PROXY
+- DOMAIN-SUFFIX,gwtproject.org,PROXY
+- DOMAIN-SUFFIX,itasoftware.com,PROXY
+- DOMAIN-SUFFIX,madewithcode.com,PROXY
+- DOMAIN-SUFFIX,material.io,PROXY
+- DOMAIN-SUFFIX,polymer-project.org,PROXY
+- DOMAIN-SUFFIX,admin.recaptcha.net,PROXY
+- DOMAIN-SUFFIX,recaptcha.net,PROXY
+- DOMAIN-SUFFIX,shattered.io,PROXY
+- DOMAIN-SUFFIX,synergyse.com,PROXY
+- DOMAIN-SUFFIX,tensorflow.org,PROXY
+- DOMAIN-SUFFIX,tfhub.dev,PROXY
+- DOMAIN-SUFFIX,tiltbrush.com,PROXY
+- DOMAIN-SUFFIX,waveprotocol.org,PROXY
+- DOMAIN-SUFFIX,waymo.com,PROXY
+- DOMAIN-SUFFIX,webmproject.org,PROXY
+- DOMAIN-SUFFIX,webrtc.org,PROXY
+- DOMAIN-SUFFIX,whatbrowser.org,PROXY
+- DOMAIN-SUFFIX,widevine.com,PROXY
+- DOMAIN-SUFFIX,x.company,PROXY
+- DOMAIN-SUFFIX,youtu.be,PROXY
+- DOMAIN-SUFFIX,yt.be,PROXY
+- DOMAIN-SUFFIX,ytimg.com,PROXY
+
+
+    # Local Area Network
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+
+
+    # (Extra IP-CIRD)
+    # > Google
+- IP-CIDR,35.190.247.0/24,PROXY
+- IP-CIDR,64.233.160.0/19,PROXY
+- IP-CIDR,66.102.0.0/20,PROXY
+- IP-CIDR,66.249.80.0/20,PROXY
+- IP-CIDR,72.14.192.0/18,PROXY
+- IP-CIDR,74.125.0.0/16,PROXY
+- IP-CIDR,108.177.8.0/21,PROXY
+- IP-CIDR,172.217.0.0/16,PROXY
+- IP-CIDR,173.194.0.0/16,PROXY
+- IP-CIDR,209.85.128.0/17,PROXY
+- IP-CIDR,216.58.192.0/19,PROXY
+- IP-CIDR,216.239.32.0/19,PROXY
+
+    # GeoIP China
+- GEOIP,CN,Domestic
+
+- MATCH,Final
