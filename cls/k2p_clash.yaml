@@ -16,15 +16,16 @@ proxy-groups:
 - name: "PROXY"
   type: select
   proxies:
-      - "URLTest 自动选择"
-      - "Fallback 故障转移"
-      - 🇭🇰 Hong Kong 09
+      - Hong Kong 09
+      - "DIRECT"
 
 
 # 白名单模式 PROXY，黑名单模式 DIRECT
 - name: "Final"
   type: select
-  proxies: DIRECT
+  proxies:
+      - "DIRECT"
+      - "PROXY"
 
 
 # Apple 服务代理
@@ -39,7 +40,6 @@ proxy-groups:
   proxies:
       - "PROXY"
       - "DIRECT"
-      - 🇭🇰 Hong Kong 09
 
 
 - name: "Ads"
@@ -275,6 +275,6 @@ rules:
 - IP-CIDR,216.239.32.0/19,PROXY
 
     # GeoIP China
-- GEOIP,CN,Domestic
+- GEOIP,CN,DIRECT
 
 - MATCH,Final
