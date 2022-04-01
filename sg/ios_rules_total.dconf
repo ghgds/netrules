@@ -1,2 +1,72 @@
 [Rule]
-#!include Rule.dconf
+DOMAIN-SUFFIX,laowang.me,DIRECT // Added for: http://share.laowang.me/
+DOMAIN,cf.odysseyplus.site,DIRECT // Added for: cf.odysseyplus.site:443
+DOMAIN,ailoli.fun,DIRECT // Added for: ailoli.fun:443
+DOMAIN,syndication.realsrv.com,REJECT // Added for: syndication.realsrv.com:443
+DOMAIN,heads-fa.scdn.co,REJECT
+DOMAIN-SUFFIX,iconfactory.net,REJECT // Added for: columba.iconfactory.net:443
+
+# My Rulesets
+#######################White List
+# shopping
+DOMAIN-SUFFIX,jd.com,DIRECT
+DOMAIN-SUFFIX,taobao.com,DIRECT
+DOMAIN-SUFFIX,tmall.com,DIRECT
+DOMAIN-SUFFIX,smzdm.com,DIRECT
+DOMAIN-SUFFIX,360buyimg.com,DIRECT
+# web steaming
+DOMAIN-SUFFIX,115.com,DIRECT
+#DOMAIN-SUFFIX,bing.com,DIRECT
+# finance
+DOMAIN-SUFFIX,alipay.com,DIRECT
+
+#######################Black List
+DOMAIN-SUFFIX,v2ex.com,Proxy
+DOMAIN-SUFFIX,inoreader.com,Proxy
+DOMAIN-SUFFIX,tedcdn.com,Proxy
+# web site
+DOMAIN-SUFFIX,lvv2.com,Proxy
+#finance
+DOMAIN-SUFFIX,mxc.com,Proxy
+DOMAIN-SUFFIX,binance.me,Proxy
+DOMAIN-SUFFIX,binance.com,Proxy
+DOMAIN-SUFFIX,binance.cloud,Proxy
+# Emby 终点站高可用入口2
+DOMAIN,pub2ha2.emby.wtf,Proxy
+DOMAIN,pub3ha2.emby.wtf,Proxy
+# Emby Otakudrive、pornemby
+DOMAIN-SUFFIX,otakudrive.life,Proxy
+DOMAIN-SUFFIX,pornemby.club,Proxy
+# PS non-download domains
+DOMAIN-SUFFIX,km.playstation.net,Proxy
+DOMAIN-SUFFIX,np.playstation.net,Proxy
+DOMAIN-SUFFIX,aem.playstation.com,Proxy
+DOMAIN-SUFFIX,api.playstation.com,Proxy
+DOMAIN-SUFFIX,communication.playstation.net,Proxy
+# TV and Movie medadata scratch
+DOMAIN,api.thetvdb.com,Proxy
+DOMAIN,api.themoviedb.org,Proxy
+
+#######################AD List
+# ios in-app ads
+DOMAIN-SUFFIX,adjust.com,AdBlock
+DOMAIN-SUFFIX,vungle.com,AdBlock
+DOMAIN-SUFFIX,appsflyer.com,AdBlock
+DOMAIN-SUFFIX,applvn.com,AdBlock
+DOMAIN-SUFFIX,unityads.unity.cn,AdBlock
+DOMAIN-SUFFIX,applovin.com,AdBlock
+DOMAIN-SUFFIX,doubleclick.net,AdBlock
+#Mi watch ads
+DOMAIN,ad.xunkids.com,AdBlock
+#spotify ads
+DOMAIN,ads-akp.spotify.com,AdBlock
+DOMAIN,audio-ak.spotify.com,AdBlock
+DOMAIN,analytics.spotify.com,AdBlock
+DOMAIN,log.spotify.com,AdBlock
+DOMAIN,log2.spotify.com,AdBlock
+DOMAIN,mp3ad.scdn.co,AdBlock
+DOMAIN,partner-service.spotify.com,AdBlock
+DOMAIN,video-fa.scdn.co,AdBlock
+DOMAIN,audio-fa.scdn.co,AdBlock
+DOMAIN,adeventtracker.spotify.com,AdBlock
+DOMAIN,audio-ak-spotify-com.akamaized.net,AdBlock
