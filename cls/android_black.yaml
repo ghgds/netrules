@@ -7,8 +7,9 @@ payload:
 # finance
   - DOMAIN-SUFFIX,mxc.com
 # Emby 终点站高可用全球入口
-  - DOMAIN,pub2back.emby.wtf
-  - DOMAIN,pub3back.emby.wtf
+  - DOMAIN,pub1.emby.wtf
+  - DOMAIN,pub2.emby.wtf
+  - DOMAIN,pub3.emby.wtf
 # Emby Otakudrive、pornemby
   - DOMAIN-SUFFIX,otakudrive.life
   - DOMAIN-SUFFIX,pornemby.club
