@@ -10,9 +10,11 @@ payload:
   - DOMAIN,pub1.emby.wtf
   - DOMAIN,pub2.emby.wtf
   - DOMAIN,pub3.emby.wtf
-# Emby Otakudrive、pornemby
+# Emby Otakudrive、pornemby,odyssey
   - DOMAIN-SUFFIX,otakudrive.life
   - DOMAIN-SUFFIX,pornemby.club
+  - DOMAIN,sg.odysseyplus.site
+  - DOMAIN,sg2.odysseyplus.site
 # PS non-download domains
   - DOMAIN-SUFFIX,km.playstation.net
   - DOMAIN-SUFFIX,np.playstation.net
