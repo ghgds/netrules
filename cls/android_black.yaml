@@ -6,15 +6,14 @@ payload:
   - DOMAIN-SUFFIX,lvv2.com
 # finance
   - DOMAIN-SUFFIX,mxc.com
-# Emby 终点站高可用全球入口
+# Emby servers
   - DOMAIN,pub1.emby.wtf
   - DOMAIN,pub2.emby.wtf
-  - DOMAIN,pub3.emby.wtf
-# Emby Otakudrive、pornemby,odyssey
-  - DOMAIN-SUFFIX,otakudrive.life
-  - DOMAIN-SUFFIX,pornemby.club
   - DOMAIN,sg.odysseyplus.site
-  - DOMAIN,sg2.odysseyplus.site
+  - DOMAIN,us.odysseyplus.site
+  - DOMAIN,kr.odysseyplus.site
+  - DOMAIN,jp.odysseyplus.site
+  - DOMAIN-SUFFIX,otakudrive.life
 # PS non-download domains
   - DOMAIN-SUFFIX,km.playstation.net
   - DOMAIN-SUFFIX,np.playstation.net
