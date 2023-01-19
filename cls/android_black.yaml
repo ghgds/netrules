@@ -8,7 +8,6 @@ payload:
   - DOMAIN-SUFFIX,mxc.com
 # Emby servers
   - DOMAIN,pub1.emby.wtf
-  - DOMAIN,pub2.emby.wtf
   - DOMAIN,sg.odysseyplus.site
   - DOMAIN,us.odysseyplus.site
   - DOMAIN,kr.odysseyplus.site
