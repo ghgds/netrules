@@ -14,8 +14,6 @@ payload:
   - DOMAIN,jp.odysseyplus.site
   - DOMAIN-SUFFIX,otakudrive.life
 # apple services
-  - DOMAIN,hls-svod.itunes.apple.com
-  - DOMAIN,amp-api.fitness.apple.com
 # PS non-download domains
   - DOMAIN-SUFFIX,km.playstation.net
   - DOMAIN-SUFFIX,np.playstation.net
