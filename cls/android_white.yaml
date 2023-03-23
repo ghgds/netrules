@@ -10,7 +10,7 @@ payload:
   - DOMAIN,pub3.emby.wtf
   - DOMAIN,cf.odysseyplus.site
   - DOMAIN-SUFFIX,jmsooo.com
-  - IP-CIDR,202.61.255.248/32
+  - DOMAIN,one.mulgore.net
 # web steaming
   - DOMAIN,ddys.art
   - DOMAIN-SUFFIX,115.com
