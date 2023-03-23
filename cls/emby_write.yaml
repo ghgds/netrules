@@ -1,0 +1,7 @@
+payload:
+# emby server
+  - DOMAIN,pub2.emby.wtf
+  - DOMAIN,pub3.emby.wtf
+  - DOMAIN,cf.odysseyplus.site
+  - DOMAIN-SUFFIX,jmsooo.com
+  - DOMAIN,one.mulgore.net
