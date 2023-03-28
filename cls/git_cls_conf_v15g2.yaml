@@ -116,7 +116,6 @@ proxy-providers:
   MY:
     type: file
     path: ./profiles/1679561603032.yml
-    #filter: '美国高级' # golang regex string
     health-check:
       enable: true
       interval: 60000
@@ -233,6 +232,12 @@ rule-providers:
     behavior: classical
     path: ./rule_provider/YouTubeMusic.yaml
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml
+    interval: 172800
+  Microsoft:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Microsoft.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
     interval: 172800
   GitHub:
     type: http
@@ -431,6 +436,7 @@ rules:
 - RULE-SET,Google,Proxy
 - RULE-SET,YouTube,MediaPxy
 - RULE-SET,YouTubeMusic,MediaPxy
+- RULE-SET,Microsoft,Proxy
 - RULE-SET,GitHub,Proxy
 - RULE-SET,AppleProxy,Proxy
 - RULE-SET,FitnessPlus,Proxy
