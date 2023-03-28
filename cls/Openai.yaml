@@ -1,0 +1,8 @@
+#Open AI
+payload:
+  - DOMAIN,DOMAIN-SUFFIX,openai.com
+  - DOMAIN,DOMAIN-SUFFIX,chat.openai.com
+  - DOMAIN,DOMAIN-SUFFIX,challenges.cloudflare.com
+  - DOMAIN,DOMAIN-SUFFIX,auth0.openai.com
+  - DOMAIN,DOMAIN-SUFFIX,platform.openai.com
+  - DOMAIN,DOMAIN-SUFFIX,ai.com
