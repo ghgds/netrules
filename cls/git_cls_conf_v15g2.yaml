@@ -113,6 +113,15 @@ proxy-providers:
       interval: 60000
       # lazy: true
       url: http://www.gstatic.com/generate_204
+  SG:
+    type: file
+    path: ./profiles/1663500236974.yml
+    filter: '新加坡高级' # golang regex string
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
   MY:
     type: file
     path: ./profiles/1679561603032.yml
@@ -130,6 +139,7 @@ proxy-groups:
       - HK
       - JP
       - US
+      - SG
 
 - name: "MyPxy"
   type: select
@@ -171,12 +181,13 @@ proxy-groups:
   proxies:
       - Proxies
 
-- name: "Other"
+- name: "Special"
   type: select
-  proxies:
-      - DIRECT
-      - MyPxy
-      - Proxies
+  use:
+      - HK
+      - JP
+      - US
+      - SG
 
 - name: "Final"
   type: select
@@ -214,6 +225,12 @@ rule-providers:
     behavior: classical
     path: ./rule_provider/emby_write.yaml
     url: https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/emby_write.yaml
+    interval: 172800
+  Openai: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/Openai.yaml
+    url: https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/Openai.yaml
     interval: 172800
   Google:
     type: http
@@ -433,6 +450,7 @@ rules:
 - RULE-SET,myrules_ads,REJECT
 - RULE-SET,emby_write,EmbyDrt
 - RULE-SET,emby_black,EmbyPxy
+- RULE-SET,Openai,Special
 - RULE-SET,Google,Proxy
 - RULE-SET,YouTube,MediaPxy
 - RULE-SET,YouTubeMusic,MediaPxy
