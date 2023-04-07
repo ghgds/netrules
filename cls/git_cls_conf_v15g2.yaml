@@ -122,6 +122,15 @@ proxy-providers:
       interval: 60000
       # lazy: true
       url: http://www.gstatic.com/generate_204
+  TW:
+    type: file
+    path: ./profiles/1663500236974.yml
+    filter: '台湾高级' # golang regex string
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
   MY:
     type: file
     path: ./profiles/1679561603032.yml
@@ -140,6 +149,7 @@ proxy-groups:
       - JP
       - US
       - SG
+      - TW
 
 - name: "MyPxy"
   type: select
@@ -188,6 +198,7 @@ proxy-groups:
       - JP
       - US
       - SG
+      - TW
 
 - name: "Final"
   type: select
