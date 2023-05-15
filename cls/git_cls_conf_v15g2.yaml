@@ -151,31 +151,12 @@ proxy-groups:
       - SG
       - TW
 
-- name: "MyPxy"
-  type: select
-  use:
-      - MY
-
 - name: "Proxy"
   type: select
   use:
       - MY
   proxies:
       - Proxies
-
-- name: "EmbyDrt"
-  type: select
-  proxies:
-      - DIRECT
-      - MyPxy
-      - Proxies
-
-- name: "EmbyPxy"
-  type: select
-  proxies:
-      - MyPxy
-      - Proxies
-      - DIRECT
 
 - name: "TgPxy"
   type: select
@@ -199,6 +180,23 @@ proxy-groups:
       - US
       - SG
       - TW
+      - MY
+
+- name: "EmbyPxy"
+  type: select
+  use:
+      - MY
+  proxies:
+      - Proxies
+      - DIRECT
+
+- name: "EmbyDrt"
+  type: select
+  use:
+      - MY
+  proxies:
+      - DIRECT
+      - Proxies
 
 - name: "Final"
   type: select
