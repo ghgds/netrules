@@ -6,3 +6,4 @@ payload:
   - DOMAIN,DOMAIN-SUFFIX,auth0.openai.com
   - DOMAIN,DOMAIN-SUFFIX,platform.openai.com
   - DOMAIN,DOMAIN-SUFFIX,ai.com
+  - DOMAIN,DOMAIN-SUFFIX,sentry.io
