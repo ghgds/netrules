@@ -455,6 +455,7 @@ rule-providers:
 
 rules:
 # Unbreak
+- DOMAIN,cdn.jsdelivr.net,DIRECT
 - RULE-SET,myrules_black,Proxy
 - RULE-SET,myrules_white,DIRECT
 - RULE-SET,myrules_ads,REJECT
