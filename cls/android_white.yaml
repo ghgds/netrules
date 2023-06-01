@@ -11,6 +11,7 @@ payload:
   - DOMAIN,ddys.art
   - DOMAIN-SUFFIX,115.com
   - DOMAIN-SUFFIX,bing.com
+  - DOMAIN,cdn.jsdelivr.net
 # finance
   - DOMAIN-SUFFIX,alipay.com
 # PS download
