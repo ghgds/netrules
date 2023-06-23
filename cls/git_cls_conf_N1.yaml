@@ -1,4 +1,4 @@
-# https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/git_cls_conf_N1.yaml
+# https://gth.iswdf.com/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/git_cls_conf_N1.yaml
 port: 7890
 socks-port: 7891
 allow-lan: false
@@ -210,247 +210,247 @@ rule-providers:
     type: http
     behavior: classical
     path: ./rule_provider/android_black.yaml
-    url: https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/android_black.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/android_black.yaml
     interval: 172800  # 2 days
   myrules_white: 
     type: http
     behavior: classical
     path: ./rule_provider/android_white.yaml
-    url: https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/android_white.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/android_white.yaml
     interval: 172800
   myrules_ads: 
     type: http
     behavior: classical
     path: ./rule_provider/android_ads.yaml
-    url: https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/android_ads.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/android_ads.yaml
     interval: 172800
   emby_black: 
     type: http
     behavior: classical
     path: ./rule_provider/emby_black.yaml
-    url: https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/emby_black.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/emby_black.yaml
     interval: 172800
   emby_write: 
     type: http
     behavior: classical
     path: ./rule_provider/emby_write.yaml
-    url: https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/emby_write.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/emby_write.yaml
     interval: 172800
   Openai: 
     type: http
     behavior: classical
     path: ./rule_provider/Openai.yaml
-    url: https://cdn.jsdelivr.net/gh/ghgds/netrules@master/cls/Openai.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/Openai.yaml
     interval: 172800
   Google:
     type: http
     behavior: classical
     path: ./rule_provider/Google.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
     interval: 172800
   YouTube:
     type: http
     behavior: classical
     path: ./rule_provider/YouTube.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
     interval: 172800
   YouTubeMusic:
     type: http
     behavior: classical
     path: ./rule_provider/YouTubeMusic.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml
     interval: 172800
   Microsoft:
     type: http
     behavior: classical
     path: ./rule_provider/Microsoft.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
     interval: 172800
   GitHub:
     type: http
     behavior: classical
     path: ./rule_provider/GitHub.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
     interval: 172800
   AppleProxy:
     type: http
     behavior: classical
     path: ./rule_provider/AppleProxy.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AppleProxy/AppleProxy.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml
     interval: 172800
   FitnessPlus:
     type: http
     behavior: classical
     path: ./rule_provider/FitnessPlus.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/FitnessPlus/FitnessPlus.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/FitnessPlus/FitnessPlus.yaml
     interval: 172800
   Speedtest:
     type: http
     behavior: classical
     path: ./rule_provider/Speedtest.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Speedtest/Speedtest.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml
     interval: 172800
   Telegram:
     type: http
     behavior: classical
     path: ./rule_provider/Telegram.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
     interval: 172800
   Twitter:
     type: http
     behavior: classical
     path: ./rule_provider/Twitter.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
     interval: 172800
   Spotify:
     type: http
     behavior: classical
     path: ./rule_provider/Spotify.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
     interval: 172800
   Wikipedia:
     type: http
     behavior: classical
     path: ./rule_provider/Wikipedia.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Wikipedia/Wikipedia.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml
     interval: 172800
   PayPal:
     type: http
     behavior: classical
     path: ./rule_provider/PayPal.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PayPal/PayPal.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml
     interval: 172800
   Instagram:
     type: http
     behavior: classical
     path: ./rule_provider/Instagram.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
     interval: 172800
   IMDB:
     type: http
     behavior: classical
     path: ./rule_provider/IMDB.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/IMDB/IMDB.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IMDB/IMDB.yaml
     interval: 172800
   Imgur:
     type: http
     behavior: classical
     path: ./rule_provider/Imgur.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Imgur/Imgur.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Imgur/Imgur.yaml
     interval: 172800
   Pixiv:
     type: http
     behavior: classical
     path: ./rule_provider/Pixiv.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Pixiv/Pixiv.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml
     interval: 172800
   Reddit:
     type: http
     behavior: classical
     path: ./rule_provider/Reddit.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Reddit/Reddit.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml
     interval: 172800
   Global:
     type: http
     behavior: classical
     path: ./rule_provider/Global.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global_Classical.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml
     interval: 172800
   ChinaTelecom:
     type: http
     behavior: classical
     path: ./rule_provider/ChinaTelecom.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaTelecom/ChinaTelecom.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaTelecom/ChinaTelecom.yaml
     interval: 172800
   ChinaMobile:
     type: http
     behavior: classical
     path: ./rule_provider/ChinaMobile.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMobile/ChinaMobile.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMobile/ChinaMobile.yaml
     interval: 172800
   CMB:
     type: http
     behavior: classical
     path: ./rule_provider/CMB.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/CMB/CMB.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/CMB/CMB.yaml
     interval: 172800
   BOC:
     type: http
     behavior: classical
     path: ./rule_provider/BOC.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BOC/BOC.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BOC/BOC.yaml
     interval: 172800
   ICBC:
     type: http
     behavior: classical
     path: ./rule_provider/ICBC.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ICBC/ICBC.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ICBC/ICBC.yaml
     interval: 172800
   UnionPay:
     type: http
     behavior: classical
     path: ./rule_provider/UnionPay.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/UnionPay/UnionPay.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UnionPay/UnionPay.yaml
     interval: 172800
   AliPay:
     type: http
     behavior: classical
     path: ./rule_provider/AliPay.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AliPay/AliPay.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AliPay/AliPay.yaml
     interval: 172800
   JingDong:
     type: http
     behavior: classical
     path: ./rule_provider/JingDong.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/JingDong/JingDong.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JingDong/JingDong.yaml
     interval: 172800
   WeChat:
     type: http
     behavior: classical
     path: ./rule_provider/WeChat.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
     interval: 172800
   DingTalk:
     type: http
     behavior: classical
     path: ./rule_provider/DingTalk.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DingTalk/DingTalk.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DingTalk/DingTalk.yaml
     interval: 172800
   ChinaMedia:
     type: http
     behavior: classical
     path: ./rule_provider/ChinaMedia.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
     interval: 172800
   115:
     type: http
     behavior: classical
     path: ./rule_provider/115.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/115/115.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/115/115.yaml
     interval: 172800
   NetEaseMusic:
     type: http
     behavior: classical
     path: ./rule_provider/NetEaseMusic.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml
     interval: 172800
   HuYa:
     type: http
     behavior: classical
     path: ./rule_provider/HuYa.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/HuYa/HuYa.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HuYa/HuYa.yaml
     interval: 172800
   ChinaNoMedia:
     type: http
     behavior: classical
     path: ./rule_provider/ChinaNoMedia.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaNoMedia/ChinaNoMedia_Classical.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaNoMedia/ChinaNoMedia_Classical.yaml
     interval: 172800
   ChinaIPs:
     type: http
     behavior: classical
     path: ./rule_provider/ChinaIPs_Classical.yaml
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_Classical.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs_Classical.yaml
     interval: 172800
 
 rules:
