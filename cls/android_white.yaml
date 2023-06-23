@@ -12,6 +12,7 @@ payload:
   - DOMAIN-SUFFIX,115.com
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,thepaper.cn
+  - DOMAIN,gth.iswdf.com
 # finance
   - DOMAIN-SUFFIX,alipay.com
 # PS download
