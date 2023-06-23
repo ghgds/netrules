@@ -11,6 +11,7 @@ payload:
   - DOMAIN-SUFFIX,ai.com
 # web site
   - DOMAIN-SUFFIX,lvv2.com
+  - DOMAIN,cdn.jsdelivr.net
 # finance
   - DOMAIN-SUFFIX,mxc.com
 # apple services
