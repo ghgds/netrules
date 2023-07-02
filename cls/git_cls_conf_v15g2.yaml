@@ -440,6 +440,12 @@ rule-providers:
     path: ./rule_provider/HuYa.yaml
     url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HuYa/HuYa.yaml
     interval: 172800
+  Steam:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Steam.yaml
+    url: https://gth.iswdf.com/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml
+    interval: 172800
   ChinaNoMedia:
     type: http
     behavior: classical
@@ -494,6 +500,7 @@ rules:
 - RULE-SET,115,DIRECT
 - RULE-SET,NetEaseMusic,DIRECT
 - RULE-SET,HuYa,DIRECT
+- RULE-SET,Steam,DIRECT
 - RULE-SET,ChinaNoMedia,DIRECT
 - RULE-SET,ChinaIPs,DIRECT
 
