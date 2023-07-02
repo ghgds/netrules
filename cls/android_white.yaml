@@ -17,3 +17,5 @@ payload:
   - DOMAIN-SUFFIX,alipay.com
 # PS download
   - DOMAIN-SUFFIX,dl.playstation.net
+# Steam game download
+  - DOMAIN-SUFFIX,steamcontent.com
