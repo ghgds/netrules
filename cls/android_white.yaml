@@ -19,3 +19,4 @@ payload:
   - DOMAIN-SUFFIX,dl.playstation.net
 # Steam game download
   - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
