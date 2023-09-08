@@ -21,6 +21,8 @@ payload:
   - DOMAIN-SUFFIX,aem.playstation.com
   - DOMAIN-SUFFIX,api.playstation.com
   - DOMAIN-SUFFIX,communication.playstation.net
+# Steam Store
+  - DOMAIN,store.steampowered.com
 # TV and Movie medadata scratch
   - DOMAIN,api.thetvdb.com
   - DOMAIN,api.themoviedb.org
