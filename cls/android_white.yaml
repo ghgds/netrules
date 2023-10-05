@@ -5,12 +5,10 @@ payload:
   - DOMAIN-SUFFIX,tmall.com
   - DOMAIN-SUFFIX,smzdm.com
   - DOMAIN-SUFFIX,360buyimg.com
-# CF CDN new ip ?
-  - IP-CIDR,104.21.0.0/16
 # web steaming
   - DOMAIN,ddys.art
   - DOMAIN-SUFFIX,115.com
-  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN,cn.bing.com
   - DOMAIN-SUFFIX,thepaper.cn
   - DOMAIN,gth.iswdf.com
 # finance
