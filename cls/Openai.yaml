@@ -2,8 +2,10 @@
 payload:
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,ai.com
-#  - DOMAIN,DOMAIN-SUFFIX,sentry.io
-#  - DOMAIN,DOMAIN-SUFFIX,chat.openai.com
-#  - DOMAIN,DOMAIN-SUFFIX,challenges.cloudflare.com
-#  - DOMAIN,DOMAIN-SUFFIX,auth0.openai.com
-#  - DOMAIN,DOMAIN-SUFFIX,platform.openai.com
+  - DOMAIN-SUFFIX,challenges.cloudflare.com
+  - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,statsig.com
+  - DOMAIN-SUFFIX,browser-intake-datadoghq.com
+  - DOMAIN-SUFFIX,livekit.cloud
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
