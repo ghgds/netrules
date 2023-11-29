@@ -199,6 +199,12 @@ proxy-groups:
       - DIRECT
       - Proxies
 
+- name: "Steam"
+  type: select
+  proxies:
+      - DIRECT
+      - Proxies
+
 - name: "Final"
   type: select
   proxies:
@@ -467,6 +473,7 @@ rules:
 - RULE-SET,emby_write,EmbyDrt
 - RULE-SET,emby_black,EmbyPxy
 - RULE-SET,Openai,Special
+- RULE-SET,Steam,Steam
 - RULE-SET,Google,Proxy
 - RULE-SET,YouTube,MediaPxy
 - RULE-SET,YouTubeMusic,MediaPxy
@@ -500,12 +507,9 @@ rules:
 - RULE-SET,115,DIRECT
 - RULE-SET,NetEaseMusic,DIRECT
 - RULE-SET,HuYa,DIRECT
-- RULE-SET,Steam,DIRECT
 - RULE-SET,ChinaNoMedia,DIRECT
 #- RULE-SET,ChinaIPs,DIRECT
 
-- GEOIP,CN,DIRECT
-- DOMAIN-SUFFIX,local,DIRECT
 - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
@@ -515,5 +519,7 @@ rules:
 - IP-CIDR6,fc00::/7,DIRECT,no-resolve
 - IP-CIDR6,fe80::/10,DIRECT,no-resolve
 - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+- DOMAIN-SUFFIX,local,DIRECT
+- GEOIP,CN,DIRECT
 
 - MATCH,Final
