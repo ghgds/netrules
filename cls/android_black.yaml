@@ -4,7 +4,6 @@ payload:
   - DOMAIN-SUFFIX,tedcdn.com
 # web site
   - DOMAIN-SUFFIX,lvv2.com
-  - DOMAIN,cdn.jsdelivr.net
 # finance
   - DOMAIN-SUFFIX,mxc.com
 # apple services
@@ -14,8 +13,6 @@ payload:
   - DOMAIN-SUFFIX,aem.playstation.com
   - DOMAIN-SUFFIX,api.playstation.com
   - DOMAIN-SUFFIX,communication.playstation.net
-# Steam Store
-  - DOMAIN,store.steampowered.com
 # TV and Movie medadata scratch
   - DOMAIN,api.thetvdb.com
   - DOMAIN,api.themoviedb.org
