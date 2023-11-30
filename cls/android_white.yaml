@@ -6,7 +6,7 @@ payload:
   - DOMAIN-SUFFIX,smzdm.com
   - DOMAIN-SUFFIX,360buyimg.com
 # web steaming
-  - DOMAIN,ddys.art
+  - DOMAIN,ddys.pro
   - DOMAIN-SUFFIX,115.com
   - DOMAIN,cn.bing.com
   - DOMAIN-SUFFIX,thepaper.cn
@@ -15,6 +15,3 @@ payload:
   - DOMAIN-SUFFIX,alipay.com
 # PS download
   - DOMAIN-SUFFIX,dl.playstation.net
-# Steam game download
-  - DOMAIN-SUFFIX,steamcontent.com
-  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
