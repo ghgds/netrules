@@ -179,8 +179,8 @@ proxy-groups:
   type: select
   use:
       - MY
-  proxies:
       - TT
+  proxies:
       - Proxies
 
 - name: "Special"
@@ -197,22 +197,23 @@ proxy-groups:
   type: select
   use:
       - MY
-  proxies:
       - TT
 
 - name: "EmbyDrt"
   type: select
   use:
       - MY
+      - TT
   proxies:
       - DIRECT
-      - TT
 
 - name: "Steam"
   type: select
+  use:
+      - MY
+      - TT
   proxies:
       - DIRECT
-      - TT
       - Proxies
 
 - name: "Final"
