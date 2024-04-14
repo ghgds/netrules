@@ -1,8 +1,10 @@
 payload:
-# Emby servers
-  - DOMAIN,pub1.emby.wtf
-  - DOMAIN,sg.odysseyplus.site
+# Emby servers Proxy
+  - DOMAIN,cf.odysseyplus.site
+  - DOMAIN,v.odysseyplus.site
   - DOMAIN,us.odysseyplus.site
   - DOMAIN,kr.odysseyplus.site
-  - DOMAIN,jp.odysseyplus.site
-  - DOMAIN-SUFFIX,otakudrive.life
+  - DOMAIN,pub1.emby.wtf
+  - DOMAIN,pub2.emby.wtf
+  - DOMAIN-SUFFIX,jmsooo.com
+  - DOMAIN-SUFFIX,285286.xyz
