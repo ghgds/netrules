@@ -13,5 +13,9 @@ payload:
   - DOMAIN,gth.iswdf.com
 # finance
   - DOMAIN-SUFFIX,alipay.com
+# Emby Server Direct
+  - DOMAIN,jp.odysseyplus.site
+  - DOMAIN,sg.odysseyplus.site
+  - DOMAIN,pub3.emby.wtf
 # PS download
   - DOMAIN-SUFFIX,dl.playstation.net
