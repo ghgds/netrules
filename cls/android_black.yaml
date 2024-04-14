@@ -6,15 +6,6 @@ payload:
   - DOMAIN-SUFFIX,lvv2.com
 # finance
   - DOMAIN-SUFFIX,mxc.com
-# EmbyServer
-  - DOMAIN,cf.odysseyplus.site
-  - DOMAIN,v.odysseyplus.site
-  - DOMAIN,us.odysseyplus.site
-  - DOMAIN,kr.odysseyplus.site
-  - DOMAIN,pub1.emby.wtf
-  - DOMAIN,pub2.emby.wtf
-  - DOMAIN-SUFFIX,jmsooo.com
-  - DOMAIN-SUFFIX,285286.xyz
 # apple services
 # PS non-download domains
   - DOMAIN-SUFFIX,km.playstation.net
