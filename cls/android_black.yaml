@@ -2,6 +2,7 @@ payload:
   - DOMAIN-SUFFIX,v2ex.com
   - DOMAIN-SUFFIX,inoreader.com
   - DOMAIN-SUFFIX,tedcdn.com
+  - DOMAIN,burn.hair
 # web site
   - DOMAIN-SUFFIX,lvv2.com
 # finance
