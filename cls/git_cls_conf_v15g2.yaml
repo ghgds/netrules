@@ -6,6 +6,9 @@ mode: rule
 log-level: info
 external-controller: '127.0.0.1:9090'
 secret: ''
+tun:
+  inet4-route-exclude-address:
+  - 192.168.0.0/16
 cfw-latency-url: 'http://cp.cloudflare.com/generate_204'
 dns:
   enable: true
