@@ -178,14 +178,15 @@ proxy-groups:
   type: select
   use:
       - MY
+      - TT
   proxies:
       - Proxies
 
 - name: "MediaPxy"
   type: select
   use:
-      - MY
       - TT
+      - MY
   proxies:
       - Proxies
 
@@ -202,14 +203,14 @@ proxy-groups:
 - name: "EmbyPxy"
   type: select
   use:
-      - MY
       - TT
+      - MY
 
 - name: "EmbyDrt"
   type: select
   use:
-      - MY
       - TT
+      - MY
   proxies:
       - DIRECT
 
@@ -225,8 +226,8 @@ proxy-groups:
 - name: "PikPak"
   type: select
   use:
-      - MY
       - TT
+      - MY
   proxies:
       - DIRECT
 
