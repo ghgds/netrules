@@ -10,7 +10,8 @@ payload:
   - DOMAIN-SUFFIX,115.com
   - DOMAIN,cn.bing.com
   - DOMAIN-SUFFIX,thepaper.cn
-  - DOMAIN,gth.iswdf.com
+  - DOMAIN,gth.jonex.top
+  - DOMAIN-SUFFIX,synology.me
 # finance
   - DOMAIN-SUFFIX,alipay.com
 # PS download
