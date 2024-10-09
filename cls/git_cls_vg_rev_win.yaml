@@ -271,8 +271,20 @@ rule-providers:
   Openai: 
     type: http
     behavior: classical
-    path: ./rule_provider/Openai.yaml
-    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/Openai.yaml
+    path: ./rule_provider/OpenAI_No_Resolve.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml
+    interval: 172800
+  Claude: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/Claude_No_Resolve.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude_No_Resolve.yaml
+    interval: 172800
+  Copilot: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/Copilot_No_Resolve.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot_No_Resolve.yaml
     interval: 172800
   Google:
     type: http
@@ -493,6 +505,8 @@ rules:
 - RULE-SET,emby_write,EmbyDrt
 - RULE-SET,emby_black,EmbyPxy
 - RULE-SET,Openai,Special
+- RULE-SET,Claude,Special
+- RULE-SET,Copilot,Special
 - RULE-SET,Steam,Steam
 - RULE-SET,Google,Proxy
 - RULE-SET,YouTube,MediaPxy
