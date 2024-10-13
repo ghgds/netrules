@@ -5,8 +5,12 @@ payload:
   - DOMAIN-SUFFIX,tmall.com
   - DOMAIN-SUFFIX,smzdm.com
   - DOMAIN-SUFFIX,360buyimg.com
+# Emby server list
+  - DOMAIN,jp.odysseyplus.site
+  - DOMAIN,sg.odysseyplus.site
+  - DOMAIN,pub3.emby.wtf
 # web steaming
-  - DOMAIN,ddys.pro
+  - DOMAIN-SUFFIX,ddys.pro
   - DOMAIN-SUFFIX,115.com
   - DOMAIN,cn.bing.com
   - DOMAIN-SUFFIX,thepaper.cn
