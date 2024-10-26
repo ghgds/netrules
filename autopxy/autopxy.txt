@@ -1,0 +1,33 @@
+! 这是注释
+! abc.com 能匹配所有url内的出现，但是不能匹配https域名
+! ||abc.com 匹配所有域名及其子域名
+! |https://x.abc.com 匹配以此开头的域名
+! 可以匹配正则表达式
+! 以上规则在此策略中表示使用direct规则
+! @@||abc.com 表示禁用代理，此处表示使用默认profile
+!
+||ip138.com
+||127.0.0.1
+||jd.com
+||taobao.com
+||tmall.com
+||smzdm.com
+||hnergy.com
+! bilibili
+||bilibili.com
+||bilivideo.cn
+||bilivideo.com
+! douyin
+||douyin.com
+||zjcdn.com
+||douyinpic.com
+||douyinvod.com
+||byteimg.com
+||douyincdn.com
+||bytegoofy.com
+||bytetos.com
+||bytednsdoc.com
+||douyinstatic.com
+||zijieapi.com
+! Other
+||hdslb.com
