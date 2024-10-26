@@ -1,3 +1,6 @@
+[AutoProxy 0.2.9]
+! Expires: 12h
+! Title: AutoPxy
 ! 这是注释
 ! abc.com 能匹配所有url内的出现，但是不能匹配https域名
 ! ||abc.com 匹配所有域名及其子域名
