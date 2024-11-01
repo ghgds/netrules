@@ -32,5 +32,9 @@
 ||bytednsdoc.com
 ||douyinstatic.com
 ||zijieapi.com
+||jomodns.com
+||supercachenode.com
+||ksyungslb.com
+||feelgood.cn
 ! Other
 ||hdslb.com
