@@ -21,20 +21,23 @@
 ||bilivideo.cn
 ||bilivideo.com
 ! douyin
-||douyin.com
-||zjcdn.com
-||douyinpic.com
-||douyinvod.com
-||byteimg.com
-||douyincdn.com
-||bytegoofy.com
-||bytetos.com
 ||bytednsdoc.com
+||bytefcdnrd.com
+||bytegoofy.com
+||byteimg.com
+||bytetos.com
+||douyin.com
+||douyincdn.com
+||douyinpic.com
 ||douyinstatic.com
-||zijieapi.com
-||jomodns.com
-||supercachenode.com
-||ksyungslb.com
+||douyinvod.com
 ||feelgood.cn
+||jomodns.com
+||ksyungslb.com
+||smtcdns.net
+||supercachenode.com
+||tbchche.com
+||zijieapi.com
+||zjcdn.com
 ! Other
 ||hdslb.com
