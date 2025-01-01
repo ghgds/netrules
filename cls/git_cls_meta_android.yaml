@@ -1,0 +1,547 @@
+# https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/git_cls_meta_android.yaml
+mixed-port: 7897
+socks-port: 7898
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9097
+secret: ''
+sniffer:
+  enable: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443]
+    QUIC:
+      ports: [443]
+  force-domain:
+    - "+.v2ex.com"
+    - "google.com"
+  skip-domain:
+    - "+.mi.com"
+dns:
+  enable: true
+  listen: 0.0.0.0:5053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/16
+  fake-ip-filter:
+    - "+.lan"
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "+.ntp.org.cn"
+    - "+.openwrt.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - time.ustc.edu.cn
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    # QQ
+    - "localhost.ptlogin2.qq.com"
+    - "localhost.sec.qq.com"
+    # WeChat
+    - "localhost.work.weixin.qq.com"
+    - "+.weixin.qq.com"
+    - "+.wechat.com"
+    # Others
+    - music.163.com
+    - "+.music.163.com"
+    - y.qq.com
+    - "+.y.qq.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - "+.stun.playstation.net"
+    - "+.xboxlive.com"
+  defult-namerserver:
+    - 119.29.29.29
+    - 8.8.8.8
+    - tls://223.5.5.5:853
+    - system
+  nameserver:
+    - 8.8.8.8 # default value
+    - tls://223.5.5.5:853 # DNS over TLS
+    - https://doh.pub/dns-query # DNS over HTTPS
+    - https://cloudflare-dns.com/dns-query
+    - https://unfiltered.adguard-dns.com/dns-query
+  nameserver-policy:
+    'GEOSITE:CN':
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+
+proxy-providers:
+  HK:
+    type: file
+    path: ./profiles/Flower_Trojan.yaml
+    filter: '香港高级' # golang regex string
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: https://cp.cloudflare.com/generate_204
+  JP:
+    type: file
+    path: ./profiles/Flower_Trojan.yaml
+    filter: '日本高级' # golang regex string
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: https://cp.cloudflare.com/generate_204
+  US:
+    type: file
+    path: ./profiles/Flower_Trojan.yaml
+    filter: '美国高级' # golang regex string
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: https://cp.cloudflare.com/generate_204
+  SG:
+    type: file
+    path: ./profiles/Flower_Trojan.yaml
+    filter: '新加坡高级' # golang regex string
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: https://cp.cloudflare.com/generate_204
+  TW:
+    type: file
+    path: ./profiles/Flower_Trojan.yaml
+    filter: '台湾高级' # golang regex string
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: https://cp.cloudflare.com/generate_204
+  TT:
+    type: file
+    path: ./profiles/Flower_Trojan.yaml
+    filter: '实验性' # golang regex string
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: https://cp.cloudflare.com/generate_204
+  MY:
+    type: file
+    path: ./profiles/my_ss.yaml
+    health-check:
+      enable: true
+      interval: 60000
+      # lazy: true
+      url: https://cp.cloudflare.com/generate_204
+
+
+proxy-groups:
+- name: "Proxies"
+  type: select
+  use:
+      - HK
+      - JP
+      - US
+      - SG
+      - TW
+
+- name: "Proxy"
+  type: select
+  use:
+      - MY
+  proxies:
+      - Proxies
+
+- name: "QhPxy"
+  type: select
+  use:
+      - MY
+  proxies:
+      - DIRECT
+
+- name: "TgPxy"
+  type: select
+  use:
+      - MY
+      - TT
+  proxies:
+      - Proxies
+
+- name: "MediaPxy"
+  type: select
+  use:
+      - TT
+      - MY
+  proxies:
+      - Proxies
+
+- name: "Special"
+  type: select
+  use:
+      - HK
+      - JP
+      - US
+      - SG
+      - TW
+      - MY
+
+- name: "EmbyPxy"
+  type: select
+  use:
+      - TT
+      - MY
+
+- name: "EmbyDrt"
+  type: select
+  use:
+      - TT
+      - MY
+  proxies:
+      - DIRECT
+
+- name: "Steam"
+  type: select
+  use:
+      - MY
+      - TT
+  proxies:
+      - DIRECT
+      - Proxies
+
+- name: "PikPak"
+  type: select
+  use:
+      - TT
+      - MY
+  proxies:
+      - DIRECT
+
+- name: "Final"
+  type: select
+  proxies:
+      - "Proxy"
+      - "DIRECT"
+
+rule-providers:
+  myrules_black: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/android_black.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/android_black.yaml
+    interval: 172800  # 2 days
+  myrules_white: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/android_white.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/android_white.yaml
+    interval: 172800
+  myrules_ads: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/android_ads.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/android_ads.yaml
+    interval: 172800
+  emby_black: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/emby_black.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/emby_black.yaml
+    interval: 172800
+  emby_write: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/emby_write.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/emby_write.yaml
+    interval: 172800
+  Openai: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/OpenAI.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    interval: 172800
+  Claude: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/Claude.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
+    interval: 172800
+  Copilot: 
+    type: http
+    behavior: classical
+    path: ./rule_provider/Copilot.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
+    interval: 172800
+  Google:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Google.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    interval: 172800
+  YouTube:
+    type: http
+    behavior: classical
+    path: ./rule_provider/YouTube.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    interval: 172800
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    path: ./rule_provider/YouTubeMusic.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml
+    interval: 172800
+  Microsoft:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Microsoft.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    interval: 172800
+  GitHub:
+    type: http
+    behavior: classical
+    path: ./rule_provider/GitHub.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    interval: 172800
+  AppleProxy:
+    type: http
+    behavior: classical
+    path: ./rule_provider/AppleProxy.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml
+    interval: 172800
+  PikPak:
+    type: http
+    behavior: classical
+    path: ./rule_provider/PikPak.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PikPak/PikPak.yaml
+    interval: 172800
+  Speedtest:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Speedtest.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml
+    interval: 172800
+  Telegram:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Telegram.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    interval: 172800
+  Twitter:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Twitter.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
+    interval: 172800
+  Spotify:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Spotify.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+    interval: 172800
+  Wikipedia:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Wikipedia.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml
+    interval: 172800
+  PayPal:
+    type: http
+    behavior: classical
+    path: ./rule_provider/PayPal.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml
+    interval: 172800
+  Instagram:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Instagram.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
+    interval: 172800
+  IMDB:
+    type: http
+    behavior: classical
+    path: ./rule_provider/IMDB.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/IMDB/IMDB.yaml
+    interval: 172800
+  Imgur:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Imgur.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Imgur/Imgur.yaml
+    interval: 172800
+  Pixiv:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Pixiv.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml
+    interval: 172800
+  Reddit:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Reddit.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml
+    interval: 172800
+  Global:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Global.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml
+    interval: 172800
+  ChinaTelecom:
+    type: http
+    behavior: classical
+    path: ./rule_provider/ChinaTelecom.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaTelecom/ChinaTelecom.yaml
+    interval: 172800
+  ChinaMobile:
+    type: http
+    behavior: classical
+    path: ./rule_provider/ChinaMobile.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMobile/ChinaMobile.yaml
+    interval: 172800
+  CMB:
+    type: http
+    behavior: classical
+    path: ./rule_provider/CMB.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/CMB/CMB.yaml
+    interval: 172800
+  BOC:
+    type: http
+    behavior: classical
+    path: ./rule_provider/BOC.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BOC/BOC.yaml
+    interval: 172800
+  ICBC:
+    type: http
+    behavior: classical
+    path: ./rule_provider/ICBC.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ICBC/ICBC.yaml
+    interval: 172800
+  UnionPay:
+    type: http
+    behavior: classical
+    path: ./rule_provider/UnionPay.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UnionPay/UnionPay.yaml
+    interval: 172800
+  AliPay:
+    type: http
+    behavior: classical
+    path: ./rule_provider/AliPay.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AliPay/AliPay.yaml
+    interval: 172800
+  JingDong:
+    type: http
+    behavior: classical
+    path: ./rule_provider/JingDong.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JingDong/JingDong.yaml
+    interval: 172800
+  WeChat:
+    type: http
+    behavior: classical
+    path: ./rule_provider/WeChat.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
+    interval: 172800
+  DingTalk:
+    type: http
+    behavior: classical
+    path: ./rule_provider/DingTalk.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DingTalk/DingTalk.yaml
+    interval: 172800
+  ChinaMedia:
+    type: http
+    behavior: classical
+    path: ./rule_provider/ChinaMedia.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+    interval: 172800
+  115:
+    type: http
+    behavior: classical
+    path: ./rule_provider/115.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/115/115.yaml
+    interval: 172800
+  NetEaseMusic:
+    type: http
+    behavior: classical
+    path: ./rule_provider/NetEaseMusic.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml
+    interval: 172800
+  HuYa:
+    type: http
+    behavior: classical
+    path: ./rule_provider/HuYa.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HuYa/HuYa.yaml
+    interval: 172800
+  Steam:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Steam.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml
+    interval: 172800
+  ChinaNoMedia:
+    type: http
+    behavior: classical
+    path: ./rule_provider/ChinaNoMedia.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaNoMedia/ChinaNoMedia_Classical.yaml
+    interval: 172800
+
+rules:
+# Unbreak
+- RULE-SET,myrules_black,Proxy
+- RULE-SET,myrules_white,DIRECT
+- RULE-SET,myrules_ads,REJECT
+- RULE-SET,emby_write,EmbyDrt
+- RULE-SET,emby_black,EmbyPxy
+- RULE-SET,Openai,Special,no-resolve
+- RULE-SET,Claude,Special,no-resolve
+- RULE-SET,Copilot,Special,no-resolve
+- RULE-SET,Steam,Steam,no-resolve
+- RULE-SET,Google,Proxy,no-resolve
+- RULE-SET,YouTube,MediaPxy,no-resolve
+- RULE-SET,YouTubeMusic,MediaPxy,no-resolve
+- RULE-SET,Microsoft,Proxy,no-resolve
+- RULE-SET,GitHub,Proxy,no-resolve
+- RULE-SET,AppleProxy,Proxy,no-resolve
+- RULE-SET,PikPak,PikPak,no-resolve
+- RULE-SET,Speedtest,Proxy,no-resolve
+- RULE-SET,Telegram,TgPxy,no-resolve
+- RULE-SET,Twitter,Proxy,no-resolve
+- RULE-SET,Spotify,MediaPxy,no-resolve
+- RULE-SET,Wikipedia,Proxy,no-resolve
+- RULE-SET,PayPal,Proxy,no-resolve
+- RULE-SET,Instagram,Proxy,no-resolve
+- RULE-SET,IMDB,Proxy,no-resolve
+- RULE-SET,Imgur,Proxy,no-resolve
+- RULE-SET,Pixiv,Proxy,no-resolve
+- RULE-SET,Reddit,Proxy,no-resolve
+- RULE-SET,Global,Proxy,no-resolve
+- RULE-SET,ChinaTelecom,DIRECT,no-resolve
+- RULE-SET,ChinaMobile,DIRECT,no-resolve
+- RULE-SET,CMB,DIRECT,no-resolve
+- RULE-SET,BOC,DIRECT,no-resolve
+- RULE-SET,ICBC,DIRECT,no-resolve
+- RULE-SET,UnionPay,DIRECT,no-resolve
+- RULE-SET,AliPay,DIRECT,no-resolve
+- RULE-SET,JingDong,DIRECT,no-resolve
+- RULE-SET,WeChat,DIRECT,no-resolve
+- RULE-SET,DingTalk,DIRECT,no-resolve
+- RULE-SET,ChinaMedia,DIRECT,no-resolve
+- RULE-SET,115,DIRECT,no-resolve
+- RULE-SET,NetEaseMusic,DIRECT,no-resolve
+- RULE-SET,HuYa,DIRECT,no-resolve
+- RULE-SET,ChinaNoMedia,DIRECT,no-resolve
+
+- IP-CIDR,192.168.20.0/24,QhPxy,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+- IP-CIDR6,::1/128,DIRECT,no-resolve
+- IP-CIDR6,fc00::/7,DIRECT,no-resolve
+- IP-CIDR6,fe80::/10,DIRECT,no-resolve
+- IP-CIDR6,fd00::/8,DIRECT,no-resolve
+- DOMAIN-SUFFIX,local,DIRECT
+- GEOIP,CN,DIRECT
+
+- MATCH,Final
