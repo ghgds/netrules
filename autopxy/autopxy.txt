@@ -9,8 +9,12 @@
 ! 以上规则在此策略中表示使用direct规则
 ! @@||abc.com 表示禁用代理，此处表示使用默认profile
 !
-||ip138.com
 ||127.0.0.1
+||163.com
+||126.net
+||163yun.com
+||netease.com
+||ip138.com
 ||jd.com
 ||taobao.com
 ||tmall.com
@@ -20,6 +24,7 @@
 ||bilibili.com
 ||bilivideo.cn
 ||bilivideo.com
+||hdslb.com
 ! douyin
 ||bytednsdoc.com
 ||bytefcdnrd.com
@@ -40,4 +45,4 @@
 ||zijieapi.com
 ||zjcdn.com
 ! Other
-||hdslb.com
+||wo1wan.com
