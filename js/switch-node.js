@@ -19,18 +19,18 @@ const minWeight = 10;      // 最小权重
 
   $httpAPI("GET", "/v1/policy_groups", null, (data) => {
     try {
-      const group = data["policy_groups"].find(g => g.name === groupName);
+      const group = data[groupName];
 
-      if (!group) {
-        console.log(`找不到策略组: ${groupName}`);
+      if (!group || !Array.isArray(group) || group.length === 0) {
+        console.log(`策略组 ${groupName} 无可用节点`);
         $done();
         return;
       }
 
-      const allPolicies = group.policies.map(p => p.name);
-      const current = group.selected_policy;
+      // 只提取节点名
+      const allPolicies = group.filter(p => !p.isGroup).map(p => p.name);
 
-      if (!Array.isArray(allPolicies) || allPolicies.length === 0) {
+      if (allPolicies.length === 0) {
         console.log('策略组无可用节点');
         $done();
         return;
@@ -44,10 +44,10 @@ const minWeight = 10;      // 最小权重
         return;
       }
 
-      // 切换节点
+      // 切换到选中的节点
       $httpAPI("POST", "/v1/policy_groups/select", { group_name: groupName, policy: nextPolicy }, (res) => {
-        console.log(`已从 ${current} 切换到 ${nextPolicy}`);
-        $notification.post('Surge节点切换成功', groupName, `从 ${current} 切换到 ${nextPolicy}`);
+        console.log(`切换到新节点: ${nextPolicy}`);
+        $notification.post('Surge节点切换成功', groupName, `已切换到 ${nextPolicy}`);
         $done();
       });
 
