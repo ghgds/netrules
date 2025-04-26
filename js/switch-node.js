@@ -1,33 +1,37 @@
-// 权重式切换节点脚本
-
-const groupName = 'Loadb'; // 你的策略组名
-const minWeight = 10;       // 最低权重值，防止最后几个节点权重太低（可调）
+const groupName = 'Loadb'; // 策略组名
+const minWeight = 10;      // 最小权重
 
 (async () => {
   const now = new Date();
   const hour = now.getHours();
-  const day = now.getDay(); // 0=周日, 1=周一, ..., 6=周六
+  const day = now.getDay(); // 0=周日
 
   if (hour < 18) {
     console.log(`现在是${hour}点，还没到晚上高峰期，不切换节点`);
     $done();
     return;
   }
-
   if (day > 0 & day < 5) {
     console.log(`今天是工作日，不切换节点`);
     $done();
     return;
   }
 
-  // 获取策略组信息
-  $httpAPI("GET", `/v1/policy_groups/select?group_name=${encodeURIComponent(groupName)}`, null, async (data) => {
+  $httpAPI("GET", "/v1/policy_groups", null, (data) => {
     try {
-      const allPolicies = data.policies;
-      const current = data.selected_policy;
+      const group = data["policy_groups"].find(g => g.name === groupName);
+
+      if (!group) {
+        console.log(`找不到策略组: ${groupName}`);
+        $done();
+        return;
+      }
+
+      const allPolicies = group.policies.map(p => p.name);
+      const current = group.selected_policy;
 
       if (!Array.isArray(allPolicies) || allPolicies.length === 0) {
-        console.log('策略组为空，无法切换');
+        console.log('策略组无可用节点');
         $done();
         return;
       }
