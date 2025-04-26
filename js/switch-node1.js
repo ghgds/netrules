@@ -1,19 +1,6 @@
 const groupName = 'Loadb'; // 策略组名
 
 (async () => {
-  const now = new Date();
-  const hour = now.getHours();
-  const day = now.getDay(); // 0=周日
-
-  if (hour < 18) {
-    $done();
-    return;
-  }
-  if (day > 0 & day < 5) {
-    $done();
-    return;
-  }
-
   $httpAPI("GET", "/v1/policy_groups", null, (data) => {
     try {
       const group = data[groupName];
