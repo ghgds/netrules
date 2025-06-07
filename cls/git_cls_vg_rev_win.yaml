@@ -74,145 +74,64 @@ dns:
     - https://dns.alidns.com/dns-query
 
 proxy-providers:
-  HK:
+  Flower:
     type: file
     path: ./profiles/Flower_Trojan.yaml
-    filter: '香港高级' # golang regex string
-    health-check:
-      enable: true
-      interval: 60000
-      # lazy: true
-      url: https://cp.cloudflare.com/generate_204
-  JP:
-    type: file
-    path: ./profiles/Flower_Trojan.yaml
-    filter: '日本高级' # golang regex string
-    health-check:
-      enable: true
-      interval: 60000
-      # lazy: true
-      url: https://cp.cloudflare.com/generate_204
-  US:
-    type: file
-    path: ./profiles/Flower_Trojan.yaml
-    filter: '美国高级' # golang regex string
-    health-check:
-      enable: true
-      interval: 60000
-      # lazy: true
-      url: https://cp.cloudflare.com/generate_204
-  SG:
-    type: file
-    path: ./profiles/Flower_Trojan.yaml
-    filter: '新加坡高级' # golang regex string
-    health-check:
-      enable: true
-      interval: 60000
-      # lazy: true
-      url: https://cp.cloudflare.com/generate_204
-  TW:
-    type: file
-    path: ./profiles/Flower_Trojan.yaml
-    filter: '台湾高级' # golang regex string
-    health-check:
-      enable: true
-      interval: 60000
-      # lazy: true
-      url: https://cp.cloudflare.com/generate_204
-  TT:
-    type: file
-    path: ./profiles/Flower_Trojan.yaml
-    filter: '实验性' # golang regex string
-    health-check:
-      enable: true
-      interval: 60000
-      # lazy: true
-      url: https://cp.cloudflare.com/generate_204
   MY:
     type: file
     path: ./profiles/my_ss.yaml
-    health-check:
-      enable: true
-      interval: 60000
-      # lazy: true
-      url: https://cp.cloudflare.com/generate_204
 
 proxy-groups:
-- name: "Proxies"
-  type: select
-  use:
-      - HK
-      - JP
-      - US
-      - SG
-      - TW
-
-- name: "Proxy"
-  type: select
-  use:
-      - MY
-  proxies:
-      - Proxies
-
-- name: "QhPxy"
-  type: select
-  use:
-      - MY
-  proxies:
-      - DIRECT
-
-- name: "TgPxy"
-  type: select
-  use:
-      - MY
-      - TT
-
-- name: "MediaPxy"
-  type: select
-  use:
-      - TT
-      - MY
-  proxies:
-      - Proxies
-
-- name: "Special"
-  type: select
-  use:
-      - HK
-      - JP
-      - US
-      - SG
-      - TW
-      - MY
-
-- name: "EmbyPxy"
-  type: select
-  use:
-      - TT
-      - MY
-
-- name: "Steam"
-  type: select
-  use:
-      - MY
-      - TT
-  proxies:
-      - DIRECT
-      - Proxies
-
-- name: "PikPak"
-  type: select
-  use:
-      - TT
-      - MY
-  proxies:
-      - DIRECT
-
-- name: "Final"
-  type: select
-  proxies:
-      - "Proxy"
-      - "DIRECT"
+  - name: QH
+    type: select
+    include-all: true
+    filter: "Qhddns"
+    hidden: true
+  - name: "Proxies"
+    type: select
+    include-all: true
+    filter: "高级"
+  - name: ORA
+    type: select
+    include-all: true
+    filter: "(?i)Hyst|Real|Reality"
+  - name: "Proxy"
+    type: select
+    proxies: [Proxies,ORA]
+  - name: TT
+    type: select
+    include-all: true
+    filter: "实验性"
+  - name: "TgPxy"
+    type: select
+    include-all: true
+    filter: "(?i)Hyst|Real|Reality|实验性"
+  - name: "Firefox"
+    type: select
+    include-all: true
+    filter: "(?i)Hyst|Real|Reality|实验性"
+  - name: "QhPxy"
+    type: select
+    proxies: [QH,DIRECT]
+  - name: "Special"
+    type: select
+    include-all: true
+    filter: "(?i)Hyst|Real|Reality|高级"
+  - name: "EmbyPxy"
+    type: select
+    proxies: [TT,ORA]
+  - name: "MediaPxy"
+    type: select
+    proxies: [TT,ORA,Proxies]
+  - name: "PikPak"
+    type: select
+    proxies: [TT,ORA,DIRECT]
+  - name: "Steam"
+    type: select
+    proxies: [DIRECT,TT,ORA]
+  - name: "Final"
+    type: select
+    proxies: [Proxy,DIRECT]
 
 rule-providers:
   myrules_black: 
