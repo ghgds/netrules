@@ -5,18 +5,51 @@ payload:
   - DOMAIN-SUFFIX,tmall.com
   - DOMAIN-SUFFIX,smzdm.com
   - DOMAIN-SUFFIX,360buyimg.com
+# AI
+  - DOMAIN-SUFFIX,sharedchat.fun
 # Emby server list
-  - DOMAIN,jp.odysseyplus.site
-  - DOMAIN,sg.odysseyplus.site
+  - DOMAIN,kr.odysseyplus.site
   - DOMAIN,pub3.emby.wtf
+  - DOMAIN-SUFFIX,makifx.com
 # web steaming
+  - DOMAIN-SUFFIX,hnergy.com
+  - DOMAIN-SUFFIX,163.com
+  - DOMAIN-SUFFIX,126.net
+  - DOMAIN-SUFFIX,163yun.com
+  - DOMAIN-SUFFIX,netease.com
   - DOMAIN-SUFFIX,ddys.pro
   - DOMAIN-SUFFIX,115.com
   - DOMAIN,cn.bing.com
   - DOMAIN-SUFFIX,thepaper.cn
   - DOMAIN,gth.jonex.top
   - DOMAIN-SUFFIX,synology.me
+  - DOMAIN-SUFFIX,ip138.com
+# bilibili
+  - DOMAIN-SUFFIX,bilibili.com
+  - DOMAIN-SUFFIX,bilivideo.cn
+  - DOMAIN-SUFFIX,bilivideo.com
+  - DOMAIN-SUFFIX,hdslb.com
+# douyin
+  - DOMAIN-SUFFIX,bytednsdoc.com
+  - DOMAIN-SUFFIX,bytefcdnrd.com
+  - DOMAIN-SUFFIX,bytegoofy.com
+  - DOMAIN-SUFFIX,byteimg.com
+  - DOMAIN-SUFFIX,bytetos.com
+  - DOMAIN-SUFFIX,douyin.com
+  - DOMAIN-SUFFIX,douyincdn.com
+  - DOMAIN-SUFFIX,douyinpic.com
+  - DOMAIN-SUFFIX,douyinstatic.com
+  - DOMAIN-SUFFIX,douyinvod.com
+  - DOMAIN-SUFFIX,feelgood.cn
+  - DOMAIN-SUFFIX,jomodns.com
+  - DOMAIN-SUFFIX,ksyungslb.com
+  - DOMAIN-SUFFIX,smtcdns.net
+  - DOMAIN-SUFFIX,supercachenode.com
+  - DOMAIN-SUFFIX,tbchche.com
+  - DOMAIN-SUFFIX,zijieapi.com
+  - DOMAIN-SUFFIX,zjcdn.com
 # finance
   - DOMAIN-SUFFIX,alipay.com
-# PS download
+# Game
   - DOMAIN-SUFFIX,dl.playstation.net
+  - DOMAIN-SUFFIX,wo1wan.com
