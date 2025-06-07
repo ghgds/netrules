@@ -25,21 +25,17 @@ sniffer:
 dns:
   enable: true
   listen: 0.0.0.0:5053
+  prefer-h3: true
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.0/16
   fake-ip-filter:
-    - "+.lan"
+    - "*.lan"
+    - "*.local"
     - time.windows.com
     - time.nist.gov
-    - time.apple.com
-    - time.asia.apple.com
-    - "+.ntp.org.cn"
-    - "+.openwrt.pool.ntp.org"
-    - time1.cloud.tencent.com
     - time.ustc.edu.cn
     - pool.ntp.org
-    - ntp.ubuntu.com
     # QQ
     - "localhost.ptlogin2.qq.com"
     - "localhost.sec.qq.com"
@@ -54,22 +50,17 @@ dns:
     - "+.y.qq.com"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
-    - localhost.ptlogin2.qq.com
-    - "+.stun.playstation.net"
-    - "+.xboxlive.com"
   defult-namerserver:
     - 119.29.29.29
     - 8.8.8.8
     - tls://223.5.5.5:853
-    - system
   nameserver:
-    - 8.8.8.8 # default value
+    - https://8.8.8.8/dns-query
     - tls://223.5.5.5:853 # DNS over TLS
-    - https://doh.pub/dns-query # DNS over HTTPS
-    - https://cloudflare-dns.com/dns-query
-    - https://unfiltered.adguard-dns.com/dns-query
+    - 114.114.114.114
+    - tls://1.12.12.12:853
   nameserver-policy:
-    'GEOSITE:CN':
+    "geosite:cn,private":
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
 
