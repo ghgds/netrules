@@ -353,24 +353,24 @@ rules:
 - RULE-SET,emby_black,EmbyPxy
 - AND,((IP-CIDR,192.168.20.0/24,no-resolve),(NOT,((SRC-IP-CIDR,192.168.20.0/24)))),QhPxy
 
-- PROCESS-NAME,firefox.exe,EmbyPxy
+- PROCESS-NAME,firefox.exe,Firefox
 
 - RULE-SET,Openai,Special,no-resolve
 - RULE-SET,Claude,Special,no-resolve
 - RULE-SET,Copilot,Special,no-resolve
 
+- RULE-SET,Telegram,TgPxy,no-resolve
 - RULE-SET,Google,Proxy,no-resolve
 - RULE-SET,YouTube,MediaPxy,no-resolve
 - RULE-SET,YouTubeMusic,MediaPxy,no-resolve
+- RULE-SET,Spotify,MediaPxy,no-resolve
 - RULE-SET,Microsoft,Proxy,no-resolve
 - RULE-SET,GitHub,Proxy,no-resolve
-- RULE-SET,Telegram,TgPxy,no-resolve
 - RULE-SET,Twitter,Proxy,no-resolve
 - RULE-SET,Speedtest,Proxy,no-resolve
 - RULE-SET,Wikipedia,Proxy,no-resolve
 - RULE-SET,PikPak,PikPak,no-resolve
-- RULE-SET,Spotify,MediaPxy,no-resolve
-- RULE-SET,Global,Proxy,no-resolve
+
 - RULE-SET,AppleProxy,Proxy,no-resolve
 - RULE-SET,Steam,Steam,no-resolve
 - RULE-SET,PayPal,Proxy,no-resolve
@@ -378,6 +378,7 @@ rules:
 - RULE-SET,Imgur,Proxy,no-resolve
 - RULE-SET,Pixiv,Proxy,no-resolve
 - RULE-SET,Reddit,Proxy,no-resolve
+- RULE-SET,Global,Proxy,no-resolve
 
 - RULE-SET,ChinaTelecom,DIRECT,no-resolve
 - RULE-SET,ChinaMobile,DIRECT,no-resolve
