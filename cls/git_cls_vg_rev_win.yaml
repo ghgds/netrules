@@ -137,7 +137,6 @@ proxy-providers:
       # lazy: true
       url: https://cp.cloudflare.com/generate_204
 
-
 proxy-groups:
 - name: "Proxies"
   type: select
@@ -249,12 +248,6 @@ rule-providers:
     behavior: classical
     path: ./rule_provider/emby_black.yaml
     url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/emby_black.yaml
-    interval: 172800
-  emby_write: 
-    type: http
-    behavior: classical
-    path: ./rule_provider/emby_write.yaml
-    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/emby_write.yaml
     interval: 172800
   Openai: 
     type: http
@@ -490,7 +483,6 @@ rules:
 - RULE-SET,myrules_black,Proxy
 - RULE-SET,myrules_white,DIRECT
 - RULE-SET,myrules_ads,REJECT
-- RULE-SET,emby_write,EmbyDrt
 - RULE-SET,emby_black,EmbyPxy
 - RULE-SET,Openai,Special,no-resolve
 - RULE-SET,Claude,Special,no-resolve
@@ -531,7 +523,7 @@ rules:
 - RULE-SET,HuYa,DIRECT,no-resolve
 - RULE-SET,ChinaNoMedia,DIRECT,no-resolve
 
-- IP-CIDR,192.168.20.0/24,QhPxy,no-resolve
+- AND,((IP-CIDR,192.168.20.0/24),(NOT,((SRC-IP-CIDR,192.168.20.0/32)))),QhPxy,no-resolve
 - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
