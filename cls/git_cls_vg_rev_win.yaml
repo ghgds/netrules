@@ -166,8 +166,6 @@ proxy-groups:
   use:
       - MY
       - TT
-  proxies:
-      - Proxies
 
 - name: "MediaPxy"
   type: select
@@ -192,14 +190,6 @@ proxy-groups:
   use:
       - TT
       - MY
-
-- name: "EmbyDrt"
-  type: select
-  use:
-      - TT
-      - MY
-  proxies:
-      - DIRECT
 
 - name: "Steam"
   type: select
@@ -454,6 +444,9 @@ rules:
 - RULE-SET,myrules_white,DIRECT
 - RULE-SET,myrules_ads,REJECT
 - RULE-SET,emby_black,EmbyPxy
+- AND,((IP-CIDR,192.168.20.0/24,no-resolve),(NOT,((SRC-IP-CIDR,192.168.20.0/24)))),QhPxy
+
+- PROCESS-NAME,firefox.exe,EmbyPxy
 
 - RULE-SET,Openai,Special,no-resolve
 - RULE-SET,Claude,Special,no-resolve
@@ -491,7 +484,6 @@ rules:
 - RULE-SET,HuYa,DIRECT,no-resolve
 - RULE-SET,ChinaNoMedia,DIRECT,no-resolve
 
-- AND,((IP-CIDR,192.168.20.0/24,no-resolve),(NOT,((SRC-IP-CIDR,192.168.20.0/24)))),QhPxy
 - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
