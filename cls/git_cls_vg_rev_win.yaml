@@ -19,7 +19,6 @@ sniffer:
       ports: [443]
   force-domain:
     - "+.v2ex.com"
-    - "google.com"
   skip-domain:
     - "+.mi.com"
 dns:
@@ -41,21 +40,18 @@ dns:
     - "localhost.work.weixin.qq.com"
     - "+.weixin.qq.com"
     - "+.wechat.com"
-    # Others
-    - music.163.com
-    - "+.music.163.com"
-    - y.qq.com
-    - "+.y.qq.com"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
   defult-namerserver:
     - 119.29.29.29
     - 8.8.8.8
     - tls://223.5.5.5:853
   nameserver:
-    - https://8.8.8.8/dns-query
     - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
     - tls://1.12.12.12:853
+  direct-nameserver:
+    - tls://223.5.5.5:853
+    - 119.29.29.29
+    - system
   nameserver-policy:
     "geosite:cn,private":
     - https://doh.pub/dns-query
