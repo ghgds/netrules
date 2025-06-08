@@ -1,6 +1,5 @@
 # https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/git_cls_vg_rev_win.yaml
-mixed-port: 7897
-socks-port: 7898
+mixed-port: 7898
 allow-lan: false
 mode: rule
 log-level: info
@@ -17,10 +16,6 @@ sniffer:
       ports: [443]
     QUIC:
       ports: [443]
-  force-domain:
-    - "+.v2ex.com"
-  skip-domain:
-    - "+.mi.com"
 dns:
   enable: true
   listen: 0.0.0.0:5053
