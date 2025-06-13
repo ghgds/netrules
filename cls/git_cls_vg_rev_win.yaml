@@ -61,10 +61,11 @@ proxy-providers:
     path: ./profiles/my_ss.yaml
 
 proxy-groups:
-  - name: "QhPxy"
+  - name: QH
     type: select
     include-all: true
-    filter: "Qhddns|DIRECT"
+    filter: "Qhddns"
+    hidden: true
   - name: "Proxies"
     type: select
     include-all: true
@@ -88,6 +89,9 @@ proxy-groups:
     type: select
     include-all: true
     filter: "(?i)Hyst|Real|Reality|实验性"
+  - name: "QhPxy"
+    type: select
+    proxies: [QH,DIRECT]
   - name: "Special"
     type: select
     include-all: true
