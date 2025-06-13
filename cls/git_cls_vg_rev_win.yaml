@@ -91,7 +91,7 @@ proxy-groups:
     filter: "(?i)Hyst|Real|Reality|实验性"
   - name: "QhPxy"
     type: select
-    proxies: [QH,DIRECT]
+    proxies: [DIRECT,QH]
   - name: "Special"
     type: select
     include-all: true
