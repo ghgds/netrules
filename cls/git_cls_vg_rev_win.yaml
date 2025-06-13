@@ -61,11 +61,10 @@ proxy-providers:
     path: ./profiles/my_ss.yaml
 
 proxy-groups:
-  - name: QH
+  - name: "QhPxy"
     type: select
     include-all: true
-    filter: "Qhddns"
-    hidden: true
+    filter: "Qhddns|DIRECT"
   - name: "Proxies"
     type: select
     include-all: true
@@ -89,9 +88,6 @@ proxy-groups:
     type: select
     include-all: true
     filter: "(?i)Hyst|Real|Reality|实验性"
-  - name: "QhPxy"
-    type: select
-    proxies: [QH,DIRECT]
   - name: "Special"
     type: select
     include-all: true
@@ -342,7 +338,8 @@ rules:
 - RULE-SET,myrules_white,DIRECT
 - RULE-SET,myrules_ads,REJECT
 - RULE-SET,emby_black,EmbyPxy
-- AND,((IP-CIDR,192.168.20.0/24,no-resolve),(NOT,((SRC-IP-CIDR,192.168.20.0/24)))),QhPxy
+- IP-CIDR,192.168.20.0/24,QhPxy,no-resolve
+# - AND,((IP-CIDR,192.168.20.0/24,no-resolve),(NOT,((SRC-IP-CIDR,192.168.20.0/24)))),QhPxy
 
 - PROCESS-NAME,firefox.exe,Firefox
 
