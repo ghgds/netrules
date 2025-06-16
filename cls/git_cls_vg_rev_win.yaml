@@ -343,7 +343,6 @@ rules:
 - RULE-SET,myrules_ads,REJECT
 - RULE-SET,emby_black,EmbyPxy
 - IP-CIDR,192.168.20.0/24,QhPxy,no-resolve
-# - AND,((IP-CIDR,192.168.20.0/24,no-resolve),(NOT,((SRC-IP-CIDR,192.168.20.0/24)))),QhPxy
 
 - PROCESS-NAME,firefox.exe,Firefox
 
