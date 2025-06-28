@@ -4,7 +4,8 @@
 !    URL-REGEX,  -> '';   add $empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
 ! Version: 0.9
 ! TimeUpdated: 2020-12-08T13:31:45+03:00
-! Expires: 7 days
+! Expires: 3 hours
+! Homepage: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/adg/pctl.txt
 ! 
 ||seofen.com^$empty,important
 ||lcread.com^$empty,important
@@ -45,3 +46,4 @@
 ||www.yeitu.com^$empty,important
 ! SNS block list
 ||weibo.cn^$empty,important
+$$div[tag-content="鑫左神图"],important
