@@ -1,10 +1,7 @@
 # https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/cls/git_openclash_owt.yaml
-mixed-port: 7898
 allow-lan: true
 mode: rule
 log-level: info
-external-controller: 127.0.0.1:9097
-secret: ''
 sniffer:
   enable: true
   override-destination: false
@@ -22,7 +19,7 @@ dns:
   prefer-h3: true
   ipv6: false
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.0/16
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - "*.lan"
     - "*.local"
@@ -46,11 +43,10 @@ dns:
   direct-nameserver:
     - tls://223.5.5.5:853
     - 119.29.29.29
-    - system
   nameserver-policy:
     "geosite:cn,private":
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
 
 proxy-providers:
   Flower:
@@ -82,10 +78,6 @@ proxy-groups:
     include-all: true
     filter: "实验性"
   - name: "TgPxy"
-    type: select
-    include-all: true
-    filter: "(?i)Hyst|Real|Reality|实验性"
-  - name: "Firefox"
     type: select
     include-all: true
     filter: "(?i)Hyst|Real|Reality|实验性"
@@ -338,12 +330,12 @@ rule-providers:
 
 rules:
 # Unbreak
+# - NOT,((OR,((SRC-IP-CIDR,127.0.0.1/16),(SRC-IP-CIDR,192.168.20.111/32),(SRC-IP-CIDR,192.168.20.211/32),(SRC-IP-CIDR,192.168.20.229/32)))),REJECT
 - RULE-SET,myrules_black,Proxy
 - RULE-SET,myrules_white,DIRECT
 - RULE-SET,myrules_ads,REJECT
 - RULE-SET,emby_black,EmbyPxy
 - IP-CIDR,192.168.20.0/24,QhPxy,no-resolve
-
 
 - RULE-SET,Openai,Special,no-resolve
 - RULE-SET,Claude,Special,no-resolve
