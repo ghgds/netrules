@@ -49,8 +49,8 @@ dns:
     - system
   nameserver-policy:
     "geosite:cn,private":
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
 
 proxy-providers:
   Flower:
