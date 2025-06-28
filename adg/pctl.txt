@@ -3,8 +3,7 @@
 !    DOMAIN-SUFFIX,   ->   || ; add ^$empty,important
 !    URL-REGEX,  -> '';   add $empty,domain=bing.com|baidu.com|google.com|so.com|sogou.com,important
 ! Version: 0.9
-! TimeUpdated: 2020-12-08T13:31:45+03:00
-! Expires: 3 hours
+! Expires: 1 hours
 ! Homepage: https://gth.jonex.top/gth/https://raw.githubusercontent.com/ghgds/netrules/main/adg/pctl.txt
 ! 
 ||seofen.com^$empty,important
