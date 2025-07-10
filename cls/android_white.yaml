@@ -11,6 +11,8 @@ payload:
   - DOMAIN,kr.odysseyplus.site
   - DOMAIN,pub3.emby.wtf
   - DOMAIN-SUFFIX,makifx.com
+  - DOMAIN-SUFFIX,theluyuan.com
+  - DOMAIN,hmian.sharepoint.com
 # web steaming
   - DOMAIN-SUFFIX,hnergy.com
   - DOMAIN-SUFFIX,163.com
