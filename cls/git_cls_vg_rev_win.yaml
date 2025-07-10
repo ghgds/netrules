@@ -52,65 +52,25 @@ dns:
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
 
-proxy-providers:
-  Flower:
-    type: file
-    path: ./profiles/Flower_Trojan.yaml
-  MY:
-    type: file
-    path: ./profiles/my_ss.yaml
+proxy-providers: 
+  Flower: {type: file, path: ./profiles/Flower_Trojan.yaml}
+  MY: {type: file, path: ./profiles/my_ss.yaml}
 
 proxy-groups:
-  - name: QH
-    type: select
-    include-all: true
-    filter: "Qhddns"
-    hidden: true
-  - name: "Proxies"
-    type: select
-    include-all: true
-    filter: "高级"
-  - name: ORA
-    type: select
-    include-all: true
-    filter: "(?i)Hyst|Real|Reality"
-  - name: "Proxy"
-    type: select
-    proxies: [Proxies,ORA]
-  - name: TT
-    type: select
-    include-all: true
-    filter: "实验性"
-  - name: "TgPxy"
-    type: select
-    include-all: true
-    filter: "(?i)Hyst|Real|Reality|实验性"
-  - name: "Firefox"
-    type: select
-    include-all: true
-    filter: "(?i)Hyst|Real|Reality|实验性"
-  - name: "QhPxy"
-    type: select
-    proxies: [DIRECT,QH]
-  - name: "Special"
-    type: select
-    include-all: true
-    filter: "(?i)Hyst|Real|Reality|高级"
-  - name: "EmbyPxy"
-    type: select
-    proxies: [TT,ORA]
-  - name: "MediaPxy"
-    type: select
-    proxies: [TT,ORA,Proxies]
-  - name: "PikPak"
-    type: select
-    proxies: [TT,ORA,DIRECT]
-  - name: "Steam"
-    type: select
-    proxies: [DIRECT,TT,ORA]
-  - name: "Final"
-    type: select
-    proxies: [Proxy,DIRECT]
+  - {name: QH, type: select, include-all: true, filter: "Qhddns", hidden: true}
+  - {name: Proxies, type: select, include-all: true, filter: "高级"}
+  - {name: ORA, type: select, include-all: true, filter: "(?i)Hyst|Real|Reality"}
+  - {name: Proxy, type: select, proxies: [Proxies,ORA]}
+  - {name: TT, type: select, include-all: true, filter: "实验性"}
+  - {name: TgPxy, type: select, include-all: true, filter: "(?i)Hyst|Real|Reality|实验性"}
+  - {name: Firefox, type: select, include-all: true, filter: "(?i)Hyst|Real|Reality|实验性"}
+  - {name: QhPxy, type: select, proxies: [DIRECT,QH]}
+  - {name: Special, type: select, include-all: true, filter: "(?i)Hyst|Real|Reality|高级"}
+  - {name: EmbyPxy, type: select, proxies: [TT, ORA]}
+  - {name: MediaPxy, type: select, proxies: [TT, ORA, Proxies]}
+  - {name: PikPak, type: select, proxies: [TT, ORA, DIRECT]}
+  - {name: Steam, type: select, proxies: [DIRECT, TT, ORA]}
+  - {name: Final, type: select, proxies: [Proxy, DIRECT]}
 
 rule-providers:
   myrules_black: 
