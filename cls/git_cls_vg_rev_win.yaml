@@ -345,7 +345,7 @@ rules:
 - IP-CIDR,192.168.20.0/24,QhPxy,no-resolve
 
 - PROCESS-NAME,firefox.exe,Firefox
-- PROCESS-NAME,"Cherry Studio.exe",Firefox
+- PROCESS-NAME,Cherry Studio.exe,Firefox
 
 - RULE-SET,Openai,Special,no-resolve
 - RULE-SET,Claude,Special,no-resolve
