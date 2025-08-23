@@ -26,6 +26,7 @@ payload:
   - DOMAIN,gth.jonex.top
   - DOMAIN-SUFFIX,synology.me
   - DOMAIN-SUFFIX,ip138.com
+  - DOMAIN-SUFFIX,acfun.cn
 # bilibili
   - DOMAIN-SUFFIX,bilibili.com
   - DOMAIN-SUFFIX,bilivideo.cn
