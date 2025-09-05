@@ -55,21 +55,31 @@ dns:
 proxy-providers: 
   Flower: {type: file, path: ./profiles/Flower_Trojan.yaml}
   MY: {type: file, path: ./profiles/my_ss.yaml}
+  ext1: {type: file, path: ./profiles/ext1.yaml}
+  ext2: {type: file, path: ./profiles/ext2.yaml}
+  ext3: {type: file, path: ./profiles/ext3.yaml}
+  ext4: {type: file, path: ./profiles/ext4.yaml}
+  ext5: {type: file, path: ./profiles/ext5.yaml}
 
 proxy-groups:
-  - {name: QH, type: select, include-all: true, filter: "Qhddns", hidden: true}
-  - {name: Proxies, type: select, include-all: true, filter: "高级"}
-  - {name: ORA, type: select, include-all: true, filter: "(?i)Hyst|Real|Reality"}
+  - {name: QH, type: select, use: MY, filter: "Qhddns", hidden: true}
+  - {name: Proxies, type: select, use: Flower, filter: "高级"}
+  - {name: ORA, type: select, use: MY, filter: "(?i)Hyst|Real|Reality"}
   - {name: Proxy, type: select, proxies: [Proxies,ORA]}
-  - {name: TT, type: select, include-all: true, filter: "实验性"}
-  - {name: TgPxy, type: select, include-all: true, filter: "(?i)Hyst|Real|Reality|实验性"}
-  - {name: Firefox, type: select, include-all: true, filter: "(?i)Hyst|Real|Reality|实验性"}
+  - {name: TT, type: select, use: Flower, filter: "实验性"}
+  - {name: TgPxy, type: select, use: [Flower, MY], filter: "(?i)Hyst|Real|Reality|实验性"}
+  - {name: Firefox, type: select, proxies: [Otsc1,Otsc2,Otsc3,Otsc4,Otsc5], use: [Flower, MY], filter: "(?i)Hyst|Real|Reality|实验性"}
   - {name: QhPxy, type: select, proxies: [DIRECT,QH]}
-  - {name: Special, type: select, include-all: true, filter: "(?i)Hyst|Real|Reality|高级"}
+  - {name: Special, type: select, use: [Flower, MY], filter: "(?i)Hyst|Real|Reality|高级"}
   - {name: EmbyPxy, type: select, proxies: [TT, ORA]}
   - {name: MediaPxy, type: select, proxies: [TT, ORA, Proxies]}
   - {name: PikPak, type: select, proxies: [TT, ORA, DIRECT]}
   - {name: Steam, type: select, proxies: [DIRECT, TT, ORA]}
+  - {name: Otsc1, type: select, use: ext1}
+  - {name: Otsc2, type: select, use: ext2}
+  - {name: Otsc3, type: select, use: ext3}
+  - {name: Otsc4, type: select, use: ext4}
+  - {name: Otsc5, type: select, use: ext5}
   - {name: Final, type: select, proxies: [Proxy, DIRECT]}
 
 rule-providers:
