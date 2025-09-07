@@ -27,6 +27,7 @@ payload:
   - DOMAIN-SUFFIX,synology.me
   - DOMAIN-SUFFIX,ip138.com
   - DOMAIN-SUFFIX,acfun.cn
+  - DOMAIN,fuliba2023.net
 # bilibili
   - DOMAIN-SUFFIX,bilibili.com
   - DOMAIN-SUFFIX,bilivideo.cn
