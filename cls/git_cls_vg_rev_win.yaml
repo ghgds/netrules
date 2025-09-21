@@ -161,6 +161,12 @@ rule-providers:
     path: ./rule_provider/AppleProxy.yaml
     url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml
     interval: 172800
+  Apple:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Apple.yaml
+    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml
+    interval: 172800
   PikPak:
     type: http
     behavior: classical
@@ -317,6 +323,18 @@ rules:
 - PROCESS-NAME,firefox.exe,Firefox
 - PROCESS-NAME,Cherry Studio.exe,Firefox
 
+- RULE-SET,ChinaTelecom,DIRECT,no-resolve
+- RULE-SET,ChinaMobile,DIRECT,no-resolve
+- RULE-SET,AliPay,DIRECT,no-resolve
+- RULE-SET,JingDong,DIRECT,no-resolve
+- RULE-SET,WeChat,DIRECT,no-resolve
+- RULE-SET,DingTalk,DIRECT,no-resolve
+- RULE-SET,ChinaMedia,DIRECT,no-resolve
+- RULE-SET,115,DIRECT,no-resolve
+- RULE-SET,NetEaseMusic,DIRECT,no-resolve
+- RULE-SET,HuYa,DIRECT,no-resolve
+- RULE-SET,ChinaNoMedia,DIRECT,no-resolve
+
 - RULE-SET,Openai,Special,no-resolve
 - RULE-SET,Claude,Special,no-resolve
 - RULE-SET,Copilot,Special,no-resolve
@@ -334,6 +352,7 @@ rules:
 - RULE-SET,PikPak,PikPak,no-resolve
 
 - RULE-SET,AppleProxy,Proxy,no-resolve
+- RULE-SET,Apple,DIRECT,no-resolve
 - RULE-SET,Steam,Steam,no-resolve
 - RULE-SET,PayPal,Proxy,no-resolve
 - RULE-SET,IMDB,Proxy,no-resolve
@@ -341,18 +360,6 @@ rules:
 - RULE-SET,Pixiv,Proxy,no-resolve
 - RULE-SET,Reddit,Proxy,no-resolve
 - RULE-SET,Global,Proxy,no-resolve
-
-- RULE-SET,ChinaTelecom,DIRECT,no-resolve
-- RULE-SET,ChinaMobile,DIRECT,no-resolve
-- RULE-SET,AliPay,DIRECT,no-resolve
-- RULE-SET,JingDong,DIRECT,no-resolve
-- RULE-SET,WeChat,DIRECT,no-resolve
-- RULE-SET,DingTalk,DIRECT,no-resolve
-- RULE-SET,ChinaMedia,DIRECT,no-resolve
-- RULE-SET,115,DIRECT,no-resolve
-- RULE-SET,NetEaseMusic,DIRECT,no-resolve
-- RULE-SET,HuYa,DIRECT,no-resolve
-- RULE-SET,ChinaNoMedia,DIRECT,no-resolve
 
 - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
