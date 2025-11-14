@@ -324,6 +324,7 @@ rules:
 - PROCESS-NAME,firefox,Firefox
 - PROCESS-NAME,firefox.exe,Firefox
 - PROCESS-NAME,Cherry Studio.exe,Firefox
+- PROCESS-NAME,musiver.exe,ORA
 
 - RULE-SET,ChinaTelecom,DIRECT,no-resolve
 - RULE-SET,ChinaMobile,DIRECT,no-resolve
