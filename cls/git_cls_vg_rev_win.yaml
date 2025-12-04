@@ -350,7 +350,7 @@ rules:
 - RULE-SET,Spotify,MediaPxy,no-resolve
 - RULE-SET,Microsoft,Proxy,no-resolve
 - RULE-SET,GitHub,Proxy,no-resolve
-- RULE-SET,Twitter,Proxy,no-resolve
+- RULE-SET,Twitter,MediaPxy,no-resolve
 - RULE-SET,Speedtest,Proxy,no-resolve
 - RULE-SET,Wikipedia,Proxy,no-resolve
 - RULE-SET,PikPak,PikPak,no-resolve
