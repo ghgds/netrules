@@ -15,7 +15,6 @@ payload:
   - DOMAIN-SUFFIX,theluyuan.com
   - DOMAIN,hmian.sharepoint.com
 # web steaming
-  - DOMAIN-SUFFIX,hnergy.com
   - DOMAIN-SUFFIX,163.com
   - DOMAIN-SUFFIX,126.net
   - DOMAIN-SUFFIX,163yun.com
