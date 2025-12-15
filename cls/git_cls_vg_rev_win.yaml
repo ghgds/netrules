@@ -320,6 +320,7 @@ rules:
 - RULE-SET,myrules_white,DIRECT
 - RULE-SET,myrules_ads,REJECT
 - RULE-SET,emby_black,EmbyPxy
+- DOMAIN-SUFFIX,hnergy.com,QhPxy,no-resolve
 - IP-CIDR,192.168.20.0/24,QhPxy,no-resolve
 
 #- PROCESS-NAME,StreetFighter6.exe,DIRECT
