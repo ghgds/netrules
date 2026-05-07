@@ -22,27 +22,22 @@ dns:
   prefer-h3: true
   ipv6: false
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.0/16
   fake-ip-filter:
     - "*.lan"
     - "*.local"
     - time.windows.com
     - pool.ntp.org
-    # QQ
-    - "localhost.ptlogin2.qq.com"
-    - "localhost.sec.qq.com"
     # WeChat
     - "localhost.work.weixin.qq.com"
     - "+.weixin.qq.com"
     - "+.wechat.com"
-  defult-namerserver:
-    - 119.29.29.29
-    - 8.8.8.8
-    - tls://223.5.5.5:853
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-    - tls://1.12.12.12:853
+    - 119.29.29.29
+    - 223.5.5.5
+    - tls://223.5.5.5:853
+    - tls://223.6.6.6:853
+    - tls://120.53.53.53
+    - tls://1.12.12.12
   direct-nameserver:
     - tls://223.5.5.5:853
     - 119.29.29.29
