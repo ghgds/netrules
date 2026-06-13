@@ -8,7 +8,8 @@ payload:
   - DOMAIN,stream-jp.odysseyplus.site
   - DOMAIN,stream-sg.odysseyplus.site
   - DOMAIN,stream-us.odysseyplus.site
-  - DOMAIN,pub1.emby.wtf
-  - DOMAIN,pub2.emby.wtf
   - DOMAIN-SUFFIX,jmsooo.com
   - DOMAIN-SUFFIX,jmsuper.com
+  - DOMAIN-SUFFIX,feiyue.lol
+  - DOMAIN-SUFFIX,emby.wtf
+  - DOMAIN-SUFFIX,285286.xyz
