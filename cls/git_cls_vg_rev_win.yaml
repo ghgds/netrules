@@ -2,20 +2,20 @@
 mixed-port: 7898
 allow-lan: false
 mode: rule
-log-level: info
+log-level: warning
 external-controller: 127.0.0.1:9097
-secret: ''
+secret: 'secretpassword'
 sniffer:
   enable: true
   override-destination: false
   sniff:
     HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
+      ports: [80, 8080]
     TLS:
       ports: [443]
     QUIC:
       ports: [443]
+ipv6: false
 dns:
   enable: true
   listen: 0.0.0.0:5053
@@ -39,8 +39,8 @@ dns:
     - tls://120.53.53.53
     - tls://1.12.12.12
   direct-nameserver:
-    - tls://223.5.5.5:853
-    - 119.29.29.29
+    - tls://223.5.5.5
+    - tls://119.29.29.29
     - system
   nameserver-policy:
     "geosite:cn,private":
@@ -192,12 +192,6 @@ rule-providers:
     path: ./rule_provider/Spotify.yaml
     url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
     interval: 172800
-  Wikipedia:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Wikipedia.yaml
-    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml
-    interval: 172800
   PayPal:
     type: http
     behavior: classical
@@ -276,7 +270,7 @@ rule-providers:
     path: ./rule_provider/ChinaMedia.yaml
     url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
     interval: 172800
-  115:
+  "115":
     type: http
     behavior: classical
     path: ./rule_provider/115.yaml
@@ -287,12 +281,6 @@ rule-providers:
     behavior: classical
     path: ./rule_provider/NetEaseMusic.yaml
     url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml
-    interval: 172800
-  HuYa:
-    type: http
-    behavior: classical
-    path: ./rule_provider/HuYa.yaml
-    url: https://gth.jonex.top/gth/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HuYa/HuYa.yaml
     interval: 172800
   Steam:
     type: http
@@ -333,7 +321,6 @@ rules:
 - RULE-SET,ChinaMedia,DIRECT,no-resolve
 - RULE-SET,115,DIRECT,no-resolve
 - RULE-SET,NetEaseMusic,DIRECT,no-resolve
-- RULE-SET,HuYa,DIRECT,no-resolve
 - RULE-SET,ChinaNoMedia,DIRECT,no-resolve
 
 - RULE-SET,Openai,Special,no-resolve
@@ -349,7 +336,6 @@ rules:
 - RULE-SET,GitHub,Proxy,no-resolve
 - RULE-SET,Twitter,MediaPxy,no-resolve
 - RULE-SET,Speedtest,Proxy,no-resolve
-- RULE-SET,Wikipedia,Proxy,no-resolve
 - RULE-SET,PikPak,PikPak,no-resolve
 
 - RULE-SET,AppleProxy,Proxy,no-resolve
